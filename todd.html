@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Truth or *Dare*"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Lakukan rap gaya bebas selama 3 menit',
+			'Biarkan orang lain membuat status menggunakan akun sosial mediamu',
+			'Berikan ponselmu kepada salah satu di antara kita dan biarkan orang tersebut mengirim satu pesan kepada siapapun yang dia mau',
+			'Cium salah satu kaus kaki di antara kita',
+			'Makan satu gigitan kulit pisang',
+			'Peragakan salah satu orang di antara kita sampai ada yang bisa menebak siapa orang yang diperagakan',
+			'Katakan meong di setiap akhir kalimat sampai selama 15 menit',
+			'Tirukan seorang selebriti sampai ada yang bisa menebak',
+			'Katakan guk di setiap akhir kalimat sampai selama 15 menit',
+			'Tirukan seorang selebriti sampai ada yang bisa menebak',
+			'Katakan ngok di setiap akhir kalimat sampai selama 15 menit',
+			'Bertingkahlah seperti ayam sampai giliranmu yang selanjutnya',
+			'Biarkan satu orang menggambar tato di wajahmu',
+			'Gunakan penutup mata lalu raba muka salah satu di antara kita sampai kamu bisa menebak siapa orang itu',
+			'push up 20 kali',
+			'sit up 20 kali',
+			'Baca/buat puisi dengan tema (alam/cinta/sesuatu yang absurd) selama dua menit (Siap-siap buat nge-story)',
+			'Kasih Instagram kamu ke (nama orang) selama dua jam (Bakal lebih panas kalau antara pacar atau gebetan)',
+			'Kasih ponsel ke (nama orang) dan dia bebas mau kirim satu pesan untuk satu orang',
+			'Plank selama semenit full',
+			'Izinkan (nama orang) buat atur gaya rambutmu',
+			'Izinkan (nama orang) buat atur ulang make-up kamu',
+			'Harus menuruti semua perkataan (nama orang) selama 20 menit ke depan',
+			'Ulangi setiap perkataan orang yang ada di sampingmu sampai kamu dapat giliran lagi',
+			'Keluarkan semua isi tas dompet kanton semua bawaan',
+			'Call orang yang dipilih sama (nama orang) dan nyanyi Happy Birthday',
+			'Call orang yang sudah taken dan bilang kalau kamu suka sama pasangannya',
+			'Publish karya apapun yang pernah kamu buat (bukan baru dibuat) ke InstaStory',
+			'Tiru gaya YouTuber atau TikToker sampai bisa ditebak orang lain',
+			'Harus rela (nama orang) bikin tato pakai pulpen di area tubuh yang terlihat',
+			'Tunjukkan liked videos di TikTok/post yang disukai di Instagram',
+			'Tunjukkan daftar chat terakhir di WhatsApp/LINE',
+			'Tunjukkan history dari browser ponsel/laptop kamu',
+			'Tunjukkan history pencarian di Instagram/TikTok/LINE',
+			'Tunjukkan foto-foto/video paling baru di galeri',
+			'Push-up sekali setiap ada orang yang bilang “aku” selama 10 menit ke depan',
+			'Makan sayuran mentah pertama yang terlihat di kulkas',
+			'tantang telpon mantan sekarang',
+			'tantang chat mantan sekarang',
+			'tantang telepon orang random',
+			'tantang telepon atau gebetan sekarang',
+			'tantang telepon orang yang kamu suka sekarang',
+			'tantang bilang i love you (nama pacar/gebetan) kamu di ig story sekarang',
+			'tantang bilang i miss you (nama mantan) kamu di ig story sekarang',
+			'kirim foto selfie ke mantan',
+			'kirim foto selfie ke gebetan',
+			'kirim pap nangis/sedih ke pacar',
+			'biarkan tmen buat story di wa sendiri',
+			'rekam kamu nyanyi dan langsung upload ke yutub tanpa di edit',
+			'rekam kamu nyanyi dan upload ke feed ig tanpa di edit 24 jam',
+			'rekam kamu goyang dan upload ke feed ig 24 jam',
+			'posting momen terjelek kamu di ig story',
+			'posting foto pacar kamu di feed ig',
+			'telepon salah satu keluarga, dan bilang bahwa kamu rindu',
+			'telpon gebetan kamu/pacar kamu dan bilang kamu engga ada paket data',
+			'kirim pesan random ke followers ig kamu',
+			'video call di ig salah satu followers kamu',
+			'vidi call whatsapp pacar/gebetan',
+			'pejamkan mata dan scroll kontak wa, siapa yg berhenti terakhir wajib kamu chat',
+			'pejamkan mata dan scroll kontak wa, siapa yg berhenti terakhir wajib kamu chat',
+			'lihatin chat kamu dengan mantan',
+			'lihatin direct message kamu',
+			'lihatin chat paling memalukan yang masih kamu simpan',
+			'lihatin folder foto di laptop kamu',
+			'minta nomor kasir minimarket',
+			'ajak kasir minimarket untuk mutualan instagram',
+			'random minta maaf ke orang yang ditemui ',
+			'Telepon orang di kontak HP secara random dan nyanyikan lagu terakhir yang kamu dengarkan',
+			'Buat story dengan filter yang paling tidak kamu sukai di Instagram',
+			'Rekam suara kamu bernyanyi lagu kesukaan dan unggah di Instagram langsung',
+			'Buat salah satu TikTok challenge yang viral dan unggah langsung',
+			'Unggah salah satu foto yang paling kamu sukai dari salah satu anak yang ada di tongkrongan',
+			'Telepon orangtua dan bilang bahwa anaknya sedang kangen kepada mereka',
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

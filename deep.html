@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Deep Talk"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apa tujuan jangka panjang Anda?',
+			'Siapa panutan Anda?',
+			'Apa yang Anda inginkan ketika Anda masih kecil?',
+			'Apa penyesalan terbesar Anda dalam hidup?',
+			'Apa tiga hal teratas dalam bucket list Anda?',
+			'Apa pencapaian terbesar Anda sejauh ini?',
+			'Apa satu hal yang Anda harap dapat Anda lakukan yang Anda tahu mungkin tidak akan pernah Anda lakukan?',
+			'Apa definisi sukses dalam hidup Anda?',
+			'Apa yang paling kamu takuti?',
+			'Apa risiko terbesar yang pernah Anda ambil?',
+			'Ceritakan tentang nasihat paling mengubah hidup yang pernah Anda dengar.',
+			'Kapan Anda paling bahagia?',
+			'Apa yang selalu menenangkan Anda ketika Anda benar-benar stres dan kesal?',
+			'Siapa dalam hidup Anda yang paling berpengaruh terhadap hidup Anda?',
+			'Apa hal tersulit yang pernah kamu lakukan?',
+			'Apa yang paling membuatmu takut tentang masa depan?',
+			'Bagaimana prioritas Anda berubah dalam 10 tahun terakhir?',
+			'Apa hal terindah yang pernah dilakukan seseorang untukmu?',
+			'Apa pendapat paling kontroversial yang Anda miliki?',
+			'Jika Anda dapat mengubah satu hal tentang kepribadian Anda, apakah itu?',
+			'Apa hal pertama yang akan Anda lakukan jika Anda memenangkan lotre?',
+			'Beri tahu saya saran terbaik Anda?',
+			'Jika Anda bisa mengundang satu orang terkenal untuk makan malam, siapa itu?',
+			'Siapa yang paling Anda rindukan dari masa lalu Anda?',
+			'Apakah Anda percaya pada keberuntungan atau apakah Anda percaya bahwa orang membuat keberuntungan mereka sendiri?',
+			'Jika uang bukan masalah, apa yang akan Anda lakukan dengan hidup Anda?',
+			'Jika Anda dapat kembali ke masa lalu, situasi apa yang akan Anda lakukan secara berbeda?',
+			'Apa hal yang pernah kamu coba tapi tidak akan pernah kamu lakukan lagi?',
+			'Siapa orang terpenting dalam hidup Anda saat ini?',
+			'Menurut Anda apa yang akan Anda lakukan pada usia ini ketika Anda masih kecil?',
+			'Teknologi apa yang bisa membuat Anda hidup tanpanya?',
+			'Apakah menurut Anda media sosial menghancurkan komunikasi kita?',
+			' Menurut Anda seperti apa dunia 20 tahun mendatang?',
+			'Apa yang membuatmu merasa gagal baru-baru ini?',
+			'Apakah Anda lebih dari orang yang spontan atau terstruktur?',
+			'Apa yang ingin Anda lakukan saat pensiun?',
+			'Apakah Anda pernah memiliki sesuatu yang dimulai dengan buruk dan berakhir dengan baik?',
+			'Pernahkah Anda berharap bisa mengubah sesuatu yang besar tentang diri Anda? Jika demikian, apa?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

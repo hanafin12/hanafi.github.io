@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Teknologi"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apa tiga situs web yang Anda kunjungi setiap hari?',
+			'Apa tiga aplikasi ponsel pintar yang Anda tidak bisa hidup tanpanya?',
+			'Bagaimana Anda tetap up to date dengan berita?',
+			'Apa gambar terakhir yang Anda ambil di ponsel Anda?',
+			'Seberapa sering Anda menggunakan ponsel Anda?',
+			'Teknologi atau bisnis apa yang menurut Anda akan usang dalam 10 tahun ke depan?',
+			'Apa 3 aplikasi terbaik di hp mu?',
+			'Aplikasi apa yang paling berguna di hp mu?',
+			'Game hp apa yang membuat anda paling ketagihan?',
+			'Aplikasi apa yang membuat kamu terkagum saat pertama menggunakannya?',
+			'Aplikasi apa yang paling unik pernah kamu gunakan?',
+			'Aplikasi yang paling membantu masyarakat?',
+			'Seberapa sering anda mengecek HP?',
+			'Kamu suka chat atau telepon?, kenapa?',
+			'Menurut anda, bagaimana teknologi HP dalam 10 tahun yang akan datang?',
+			'Apakah kamu harus selalu mempunyai hp dengan teknologi terbaru?',
+			'Apa yang paling menyebalkan dari HP mu?',
+			'Bagaimana perasaan anda, bila tidak sengaja meninggalkan hp kamu di rumah?',
+			'Mengapa kamu memilih tipe HP yang saat ini anda gunakan?',
+			'Apa HP pertamamu dan bagaimana kamu perasaan kamu saat mempunyai hp pertama?',
+			'Apa tempat favorit Anda?',
+			'Apa teknologi favorit yang anda miliki?',
+			'Teknologi apa yang membuat anda kesusahan dalam menggunakannya?',
+			'Menurutmu penemuan teknologi terhebat apa dalam 50 tahun terakhir?',
+			'Apakah teknologi membuat hidup lebih simpel atau makin rumit?',
+			'Apakah teknologi akan menyelamatkan umat manusia atau menghancurkan umat manusia?',
+			'Teknologi baru mana yang paling Anda sukai?',
+			'Apa film atau buku genre sci-fi yang menurutmu akan menjadi kenyataan di masa depan?',
+			'Menurut anda, apa kemajuan teknologi yang besar berikutnya?',
+			'Teknologi apa dari film fiksi ilmiah yang paling ingin Anda miliki?',
+			'Masalah apa yang akan dipecahkan oleh teknologi dalam 5 tahun ke depan? Masalah apa yang akan diciptakannya?',
+			'Dapatkah Anda memikirkan teknologi apa yang hanya memperburuk dunia? ',
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

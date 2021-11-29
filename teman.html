@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Teman"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Jika Anda hanya bisa makan satu makanan selama sisa hidup Anda, anda akan memilih makanan apa?',
+			'Apa kutipan favorit Anda saat ini?',
+			'Apa tips terbaik Anda untuk menghemat uang?',
+			'Apa kutipan favorit Anda saat ini?',
+			'Apakah Anda berbicara dengan si anu akhir-akhir ini?',
+			'Apa yang kamu lakukan sejak terakhir kali aku melihatmu?',
+			'Apakah ada perubahan besar di tempat kerja?',
+			'Bagaimana kabar orang tuamu?',
+			'Apa yang kamu sukai di TV akhir-akhir ini?',
+			'Apa tips terbaik Anda untuk rutinitas pagi yang baik?',
+			'Apa tips memasak terbaik Anda?',
+			'Apa hal teraneh yang pernah kamu lihat di Facebook baru-baru ini?',
+			'Di mana tempat favorit Anda untuk berbelanja?',
+			'Bagaimana liburan terakhirmu?',
+			'Di mana tempat paling keren yang pernah kamu kunjungi untuk makan malam akhir-akhir ini?',
+			'Di mana tempat paling keren yang pernah kamu kunjungi?',
+			'Apa hidangan andalan Anda untuk dibawa ke pesta makan malam?',
+			'Apa yang Anda lakukan akhir pekan lalu?',
+			'Aplikasi apa yang Anda gunakan setiap hari?',
+			'Apa hal paling aneh di lemari es Anda saat ini?',
+			'Apa rencana Anda untuk musim panas mendatang?',
+			'Apa barang favorit Anda yang baru saja Anda beli?',
+			'Bagaimana cara mengetahui seseorang berbohong?',
+			'Apa ketakutanmu yang paling irasional?',
+			'Pernahkah Anda benar-benar menepati resolusi Tahun Baru?',
+			'Jika uang bukan masalah, apa yang akan Anda lakukan dengan hidup Anda?',
+			'Jika Anda dapat mengubah nama Anda, apa yang akan Anda ubah?',
+			'Bagaimana hidup Anda akan berbeda jika media sosial tidak ada?',
+			'Menurut Anda, apa ciri kepribadian terbaik saya?',
+			'Apa yang pertama kali Anda perhatikan tentang saya?',
+			'Apa hal favorit Anda untuk dilakukan pada hari libur kerja Anda?',
+			'Apa yang paling tidak Anda sukai tentang tinggal di kota / kota Anda?',
+			'Apa pekerjaan pertama yang pernah Anda miliki?',
+			'Apa pujian terbaik yang pernah Anda dapatkan?',
+			'Apakah Anda pernah bernyanyi di kamar mandi?',
+			'Apa nasihat terburuk yang pernah Anda dapatkan?',
+			'Apa hal paling memalukan yang terjadi padamu baru-baru ini? atau di masa lampau?',
+			'Ceritakan tentang gombal terburuk yang pernah Anda dapatkan.',
+			'Apa skandal selebriti favorit Anda saat ini?',
+			'Apa hal terburuk yang pernah Anda pakai?',
+			'Jika Anda bisa melakukan sesuatu yang ilegal tanpa mendapat masalah, apakah itu?',
+			' Apa lelucon terbodoh yang pernah kamu dengar?',
+			'Kapan terakhir kali kamu tertawa begitu keras sampai kamu menangis?',
+			'Apa lelucon terbaik yang pernah kamu mainkan pada seseorang?',
+			'Menurutmu apa film terlucu yang pernah ada?',
+			'Apa yang selalu membuatmu tertawa, bahkan ketika kamu sedang kesal?',
+			'Siapa komedian favoritmu?',
+			'Teori konspirasi aneh apa yang kamu percaya? atau pernah kamu percayai?',
+			'Apakah hot dog itu sandwich?',
+			'Apa hal teraneh yang kamu cintai sebagai seorang anak?',
+			'Apa sesuatu yang sangat populer saat ini yang akan menjadi konyol dalam lima tahun?',
+			'Apa tren terburuk yang pernah Anda ikuti?',
+			'Apa leluconmu?',
+			'Apa penemuan terbaik menurut Anda?',
+			'Apakah sereal itu sup?',
+			'Coba ceritakan hal bodoh atau kekonyolan yang pernah kamu lakukan atau dengar?',
+			
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

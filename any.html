@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Situasi Apapun"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Coba ceritakan tentang dirimu?',
+			'Apakah Anda melakukan sesuatu yang menarik akhir-akhir ini?',
+			'Apa yang membuatmu tersenyum hari ini?',
+			'Bagaimana Anda bertemu tuan rumah?',
+			'media sosial favorit Anda?',
+			'Apa buku bagus terakhir yang kamu baca?',
+			'Film atau series terbaik di Netflix menurutmu saat ini?',
+			'Apakah Anda melakukan traveling yang menarik akhir-akhir ini?',
+			'Menurut Anda apa film terbaik tahun ini sejauh ini?',
+			'Menurut Anda apa film terbaik sepanjang masa sejauh ini?',
+			'Lagu apa yang kamu harap bisa kamu dengar sekarang?',
+			'Menurut Anda, apakah Anda seorang introvert atau ekstrovert?',
+			'Jika Anda dapat memilih pekerjaan, Anda ingin menjadi apa?',
+			'Apa bakat terpendam Anda yang paling aneh?',
+			'Apa sesuatu yang selalu membuat orang terkejut Ketika orang lain mendengar sesuatu dari anda tentang Anda sendiri?',
+			'Apa bagian paling berharga dalam karir Anda?',
+			'Di mana Anda ingin berada dalam lima tahun?',
+			'Kekuatan super apa yang ingin Anda miliki?',
+			'Ke mana Anda akan pergi berlibur jika tidak ada anggaran?',
+			'Jika Anda dapat melakukan perjalanan kembali ke masa lalu, dekade apa yang akan Anda pilih untuk hidup?',
+			'Apa hal terbaik yang pernah Anda beli dari olshop?',
+			'Apa konser terakhir yang kamu datangi?',
+			'Apa satu hal yang Anda tidak bisa hidup tanpanya?',
+			'Apa mimpi teraneh yang kamu alami baru-baru ini?',
+			'Apa buku favorit Anda sepanjang masa?',
+			'Berapa banyak negara yang pernah Anda kunjungi?',
+			'Apa kota favorit Anda yang pernah Anda kunjungi?',
+			'Apakah Anda lebih suka bepergian dengan pesawat atau kapal? atau apa?',
+			'Apakah Anda seorang suka menggunakan uang atau penabung?',
+			'Apa pendapat Anda tentang keluarga kerajaan?',
+			'Apa keahlian/bakat terbaik Anda?',
+			'Apakah Anda suka film dokumenter? Apakah Anda menonton yang bagus baru-baru ini?',
+			'Siapa pasangan selebriti favorit Anda?',
+			' Pasangan selebriti mana yang kamu harap akan kembali bersama?',
+			' Apa olahraga favorit Anda?',
+			'Jika Anda bisa menjadi pembawa acara talk show, siapa yang akan Anda ajak pertama kali?',
+			'Apakah Anda lebih dari orang yang spontan atau terstruktur?',
+			'Olahraga apa yang Anda harap Anda kuasai?',
+			'Apa liburan terbaik?',
+			'Bagaimana Anda menghabiskan ulang tahun terakhir Anda?',
+			'Apakah Anda percaya pria dan wanita bisa berteman?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

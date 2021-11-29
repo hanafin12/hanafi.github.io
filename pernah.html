@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Pernahkah?"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Pernahkah mendapatkan piala/juara? kalau iya apa?',
+			'Berpikiran Punya tato?',
+			'Berharap Anda seorang superhero? Jika demikian, yang mana? Kenapa?',
+			'Memaikan alat musik atau menyanyi dalam sebuah band?',
+			'Menulis buku/puisi/diari?',
+			'Punya masalah besar untuk diatasi, dan Anda berhasil?',
+			'Menjadi sukarelawan dengan organisasi yang membantu orang lain? Apa rasanya?',
+			'Bepergian ke tempat yang tidak biasa? Kemana?',
+			'Belajar bahasa asing atau bahasa isyarat? Mengapa?',
+			'Mengajar di kelas? Jika demikian, apa kelasnya?',
+			'Melihat atau mendengar sesuatu yang, tidak peduli seberapa keras Anda mencoba menahan keinginan itu, menyebabkan Anda menutup mata?',
+			'Merasakan ingin bunuh diri?',
+			'Memelihara hewan peliharaan? Apa hewannya',
+			'Patah tulang?',
+			'Muncul di TV atau di radio',
+			'Tidak tidur seharian penuh?',
+			'Memecahkan sesuatu secara sengaja?',
+			'pergi sky diving, bungee jumping, atau para-sailing?',
+			'berbicara di telepon selama lebih dari dua jam?',
+			'tersesat di taman hiburan atau berlibur?',
+			'punya teman yang hari ulang tahunnya sama denganmu?',
+			'pergi keluar saat hujan tanpa memakai payung/jas hujan dan benar-benar menikmatinya?',
+			'sesuatu yang memalukan terjadi padamu? coba ceritakan',
+			'memiliki pengalaman mendekati kematian?',
+			'mendapat masalah di sekolah atau di tempat ibadah',
+			'membantu seseorang yang dalam bahaya?',
+			'memakai pakaian dalam yang sama dua hari berturut-turut?',
+			'minum soda pop, tertawa, dan ingus keluar dari hidungmu?',
+			'pergi berkemah di tenda?',
+			'memiliki ponsel Anda berdering pada saat yang memalukan?',
+			'dinyanyikan saat karaoke/tampil oleh orang lain, atau melakukan lip-sync lagu?',
+			'melihat bayi manusia, atau bayi hewan lahir?',
+			'harus mendapatkan jahitan?',
+			'membayar makanan atau minuman orang asing, tanpa mereka tahu itu Anda?',
+			'memanjat pohon, atau naik ke atap dan tidak bisa turun?',
+			'menemukan dompet atau uang yang dijatuhkan seseorang?',
+			'naik wahana yang membuatmu berteriak ketakutan?',
+			'berbohong untuk mendapatkan sesuatu yang lebih murah dari itu?',
+			'memenangkan kontes dan menerima hadiah?',
+			'berbicara jalan keluar dari mendapatkan masalah?',
+			'mengambil gambar wajah Anda di mesin Xerox/fotokopian?',
+			'melihat tornado yang sebenarnya (bukan di TV atau di film)?',
+			'pernah ski air atau ski salju?',
+			'bertemu orang terkenal atau selebriti?',
+			'bernyanyi di depan publik?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

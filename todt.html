@@ -1,0 +1,134 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "*Truth* or Dare"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Acara TV apa yang paling kamu benci? Beri tahu alasannya!',
+			'Kapan terakhir kali kamu berbohong?',
+			'Kapan terakhir kali kamu menangis?',
+			'Kapan terakhir kali kamu kentut?',
+			'Apa ketakutan terbesarmu?',
+			'Apa fantasi terbesar atau teranehmu?',
+			'Pernahkah kamu selingkuh?',
+			'Apa hal terburuk yang pernah kamu lakukan?',
+			'Apa rahasia yang tidak pernah kamu ceritakan kepada siapapun?',
+			'Apa pengalaman intim terburuk yang pernah kamu alami?',
+			'Apakah kamu pernah melanggar hukum?',
+			'Apa hal paling memalukan yang pernah kamu lakukan? Kapan?',
+			'Apa hal yang paling membuatmu merasa insecure?',
+			'Apa hal paling menjijikkan yang pernah kamu lakukan?',
+			'Siapa orang yang paling ingin kamu cium di antara kita?',
+			'Apa kebiasaan terburukmu?',
+			'Hal terburuk apa yang pernah kamu katakan/lakukan terhadap orang lain?',
+			'Apa penyesalan terburukmu?',
+			'Kenapa kamu putus dengan mantan yang sebelumnya?',
+			'Kalau kamu bisa jadi tidak terlihat, apa hal pertama yang akan kamu lakukan?',
+			'Apa rahasia yang kamu sembunyikan dari orangtuamu?',
+			'Siapa orang yang diam-diam kamu sukai?',
+			'Siapa orang terakhir yang kamu kepoin di media sosial?',
+			'Kalau ada jin yang memberikanmu tiga permohonan, apa yang kamu inginkan?',
+			'Siapa orang di antara kita yang menurutmu bisa lolos dari kiamat zombie dan siapa yang akan mati duluan? Beri tahu alasannya!',
+			'Apa tontonan favoritmu saat masih kecil?',
+			'Siapa orang yang paling sering kamu chat?',
+			'Apa kebohongan terbesar yang pernah kamu katakan kepada orangtuamu?',
+			'Apa mimpi paling aneh yang pernah kamu alami?',
+			'Ceritakan detail ciuman pertamamu…',
+			'Kapan terakhir kali kamu ngompol?',
+			'Menurutmu, hewan apa yang terlihat paling mirip denganmu?',
+			'Di antara kita, siapa orang yang paling kamu suka dalam konteks romantis?',
+			'Di antara kita, siapa orang yang menurutmu paling baik dan paling buruk sifatnya?',
+			'Siapa mantan terindahmu?',
+			'Siapa orang yang ingin kamu jadikan istri/suami?',
+			'Apakah kamu pernah melakukan ghosting?',
+			'Apa aib yang kamu sembunyikan dari kami?',
+			'Berapa jumlah mantanmu?',
+			'Kalau kamu bisa baca pikiran, pikiran siapa yang bakal kamu baca duluan?.',
+			'Video TikTok atau YouTube paling memalukan yang pernah kamu tonton?',
+			'Film/serial/drama/anime paling memalukan yang pernah kamu tonton?',
+			'Cerita Wattpad/fan fiction/buku paling memalukan yang pernah kamu baca?',
+			'Kalau kamu cuma bisa makan satu jenis makanan seumur hidup, mau makan apa?',
+			'Hal kecil apa yang pernah dilakukan (nama orang) dan bikin kamu senang banget?',
+			'Kalau bisa jadi tokoh fiksi selama sehari, mau jadi apa?',
+			'Apa love language kamu?',
+			'Artis atau lagu apa yang paling sering kamu putar pas lagi down?',
+			'Kapan terakhir kali menangis?',
+			'Apa penyesalan terbesarmu?',
+			'Apa ketakutan terbesarmu?',
+			'Momen life-changing yang pernah kamu alami?',
+			'Siapa nih crush rahasia kamu?',
+			'Hal apa yang kamu harap (nama orang) bisa ubah dari dirinya?',
+			'Baca chat terakhir yang kamu kirim ke sahabat.',
+			'Apa yang kita nggak tahu pernah terjadi di antara kamu sama (nama orang)?',
+			'Tiga hal apa yang harus gebetan atau pacar kamu punya?.',
+			'Di antara pemain, siapa yang paling dekat atau paling tahu banyak tentang kamu?',
+			'First impression kamu tentang (nama orang)?',
+			'Kapan terakhir kali kamu kelaparan?',
+			'Berapa sisa saldo atm kamu?',
+			'Berapa sisa uang di dompetmu?',
+			'Siapa cinta pertamamu?',
+			'Bagaimana first datemu?',
+			'siapa mantan yang paling kamu sayang?',
+			'siapa mantan yang paling kamu benci?',
+			'Hal yang paling berkesan dari date yang selama ini kamu jalani??',
+			'Apa kejadian paling lucu yang terjadi di tengah date bersama dengan gebetan dahulu?',
+			'Apa hal paling memalukan yang pernah kamu alami selama menjalin hubungan dengan mantan terdahulu?',
+			'Apa sifat terbaik dari dirimu yang paling kamu senangi?',
+			'Jika kamu bisa berubah menyerupai hal apa saja, kamu ingin berubah menjadi apa?',
+			'Bagaimana date impian yang ingin kamu lakukan atau alami?yang brengsek?',
+			'Apa topik yang paling senang kamu bicarakan dengan orang lain?',
+			'Bagaimana tipe ideal dari pacar yang ingin kamu miliki?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

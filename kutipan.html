@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan Kutipan</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'“Keberhasilan bukanlah milik orang yang pintar. Keberhasilan adalah kepunyaan mereka yang senantiasa berusaha” – B.J. Habibie',
+			'“Saat suatu hubungan berakhir, bukan berarti 2 orang berhenti saling mencintai. Mereka hanya berhenti saling menyakiti.” – R. A. Kartini',
+			'“Terkadang, kesulitan harus kamu rasakan terlebih dulu sebelum kebahagiaan yang sempurna datang kepadamu” – R. A. Kartini',
+			'“Habis gelap terbitlah terang” – R. A. Kartini',
+			'“Belajar tanpa berpikir itu tidaklah berguna, tapi berpikir tanpa belajar itu sangatlah berbahaya” – Ir. Soekarno',
+			'“Barang siapa ingin mutiara, harus berani terjun di lautan yang dalam” – Ir. Soekarno',
+			' “Kurang cerdas dapat diperbaiki dengan belajar. Kurang cakap dapat dihilangkan dengan pengalaman. Namun tidak jujur itu sulit diperbaiki” – Mohammad Hatta',
+			'“Filosofi meluaskan pandangan serta mempertajam pikiran” – Mohammad Hatta',
+			'“Saya rela pergi ke penjara, selama ada buku. Karena dengan buku saya bebas.” – Mohammad Hatta',
+			'“Jika kalian ingin menjadi pemimpin besar, menulislah seperti wartawan dan bicaralah seperti orator” – HOS Tjokroaminoto',
+			'“Agama dilahirkan untuk kedamaian, bukan untuk kekerasan”- Abdurrahman Wahid',
+			' “Jalan yang paling baik untuk menghilangkan musuhmu adalah dengan menganggapnya sebagai kawan” – Sri Sultan Hamengku Buwono VIII',
+			'“Ketamakan akan membuat orang kaya menjadi miskin” – Sri Sultan Hamengku Buwono VIII',
+			'“Kejahatan akan menang bila orang yang benar tidak melakukan apa-apa” – Jenderal Sudirman',
+			'“Kadang kita terlalu sibuk memikirkan kesulitan-kesulitan sehingga kita tidak punya waktu untuk mensyukuri rahmat Tuhan” – Jenderal Sudirman',
+			'“Setiap orang menjadi guru, setiap rumah menjadi sekolah” – Ki Hajar Dewantara',
+			'“Kebenaran suatu hal tidaklah ditentukan oleh berapa banyaknya orang yang mempercayainya” – K.H. Ahmad Dahlan',
+			'“Teladan yang baik adalah khotbah yang jitu” – K.H. Ahmad Dahlan',
+			'“Sedangkan sebetulnya cara mendapatkan hasil itulah yang lebih penting daripada hasil sendiri” – Tan Malaka',
+			' “Siapa yang tidak bekerja tidak akan makan” – Tan Malaka',
+			'“Bukan kesulitan yang membuat kita takut, tapi sering ketakutanlah yang membuat jadi sulit. Jadi, jangan mudah menyerah” – Joko Widodo, Presiden RI-7',
+			'“Jangan takut untuk bekerja, jangan bekerja kalau takut” – Susi Pudjiastuti, Menteri Kelautan dan Perikanan',
+			'“Kekecewaan itu harus kita salurkan dengan bekerja lebih baik lagi dan bekerja keras untuk mencapai prestasi yang lebih tinggi” – Sri Mulyani, Menteri Keuangan',
+			'“Seorang terpelajar harus sudah berbuat adil sejak dalam pikiran apalagi dalam perbuatan” – Pramoedya Ananta Toer, Sastrawan & Penulis',
+			'“Saya kaya sebab saya punya semua yang saya butuhkan, bukan yang saya inginkan” – Basuki “Ahok” Tjahaja Purnama, Gubernur DKI Jakarta 2014-2017',
+			'Membangun sebuah bangsa adalah membangun sebuah peradaban. -Munir Said Thalib',
+			'Aparat keamanan harus bertindak efektif, proporsional dan profesional bukan tidak bertindak dengan alasan takut dituduh melanggar HAM. -Munir Said Thalib',
+			'Aku harus tenang walaupun takut. Untuk membuat semua orang tidak takut. Normal, sebagai orang, ya pasti ada takut, nggak ada orang yang nggak takut, Cuma yang coba aku temukan merasionalisasi rasa takut. -Munir Said Thalib',
+			'Kesalahan orang-orang pandai ialah menganggap yang lain bodoh, dan kesalahan orang-orang bodoh ialah menganggap orang lain pandai. -Pramoedya Ananta Toer',
+			'Selama penderitaan datang dari manusia, dia bukan bencana alam, dia pun pasti bisa dilawan oleh manusia. -Pramoedya Ananta Toer',
+			'Dengan ilmu pengetahuan modern, binatang buas akan menjadi lebih buas, dan manusia keji akan semakin keji. Tapi jangan dilupakan, dengan ilmu-pengetahuan modern binatang-binatang yang sebuas-buasnya juga bisa ditundukkan. -Pramoedya Ananta Toer',
+			'Apa guna punya ilmu tinggi kalau hanya untuk mengibuli, apa guna banyak baca buku kalau mulut kau bungkam melulu. -Wiji Thukul',
+			' “Beri aku 1.000 orang tua, niscaya akan kucabut semeru dari akarnya. Beri aku 10 pemuda niscaya akan kuguncangkan dunia.”-Ir.Soekarno',
+			'“Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya.-Ir.Soekarno”',
+			'"Kurang cerdas dapat diperbaiki dengan belajar. Kurang cakap dapat dihilangkan dengan pengalaman. Namun tidak jujur itu sulit diperbaiki."-Moh Hatta',
+			'“Ing ngarsa sung tulada, ing madya mangun karsa, tut wuri handayani. (Di depan, seorang pendidik harus memberi teladan baik. Di tengah, guru harus menciptakan ide. Dari belakang, seorang guru harus memberi dorongan dan arahan.”-Ki Hadjar Dewantara',
+			'“Banyak orang menyebut penderitaan mereka sebagai nasib, namun sesungguhnya penderitaan adalah akibat kebodohan mereka sendiri.”-Jendral Soedirman',
+			'“Kebebasan berarti bebas melakukan semua kebaikan, bukan bebas lepas melakukan semua kejahatan tanpa boleh diadili.”-Jendral Soedirman',
+			'"Banyak hal yang bisa menjatuhkanmu. Tapi satu-satunya hal yang benar-benar dapat menjatuhkanmu adalah sikapmu sendiri."-RA Kartini',
+			'"Jangan memperbanyak lawan, tetapi perbanyaklah kawan."-Bung Tomo',
+			'"Hidup yang tidak dipertaruhkan tidak akan pernah dimenangkan."-Sultan Syahrir',
+			'"Alangkah mengerikannya menjadi tua dengan kenangan masa muda yang hanya berisi kemacetan jalan, ketakutan datang terlambat ke kantor, tugas-tugas rutin yang tidak menggugah semangat, dan kehidupan seperti mesin, yang hanya akan berakhir dengan pensiun tidak seberapa." – Seno Gumira Ajidarma',
+			'“Orang boleh pandai setinggi langit, tapi selama ia tidak menulis, ia akan hilang di dalam masyarakat dan dari sejarah. Menulis adalah bekerja untuk keabadian.”― Pramoedya Ananta Toer',
+			'“Dalam hidup kita, cuma satu yang kita punya, yaitu keberanian. Kalau tidak punya itu, lantas apa harga hidup kita ini?”― Pramoedya Ananta Toer',
+			'“Definisi kesepian yang sebenarnya adalah hidup tanpa tanggung jawab sosial.” ― Goenawan Mohamad',
+			'“Kemampuan membaca itu sebuah rahmat. Kegemaran membaca: sebuah kebahagiaan.”― Goenawan Mohamad',
+			'“Kau harus tahu lupa adalah lahan subur kenangan-kenangan. Biarkan ia mengalir seumpama sungai. Saatnya akan tiba, kau akan betul-betul lupa.” ― M. Aan Mansyur',
+			'“Mantan kekasih persis seperti utang, kita tidak pernah betul-betul melupakannya. Kita hanya selalu pura-pura melupakannya.”― M. Aan Mansyur',
+			'“Aku mencintaimu. Itu sebabnya aku takkan pernah selesai mendoakan keselamatanmu” ― Sapardi Djoko Damono',
+			'“Kalau yang memuji itu teman baik, itu biasa. Kalau yang mencela itu musuh, juga biasa. Tapi kalau yang memuji itu musuh, dan yang mencela itu kawan, itu menyebabkan saya berpikir-pikir.” ― A.A. Navis',
+			'“Semakin banyak yang kuketahui tentang dirinya, semakin ia tak menarik lagi. Hubungan kita bisa panjang, karena aku tak tahu seluruhnya tentang dirimu.”― Linda Christanty',
+			'"Bagi saya, hidup terlalu singkat untuk dilewatkan dengan biasa-biasa saja." (Perahu Kertas, Dewi Dee Lestari)',
+			'"Kalau hidup sekadar hidup, babi di hutan juga hidup. Kalau kerja sekadar bekerja, kera juga bekerja." (Tenggelamnya Kapal Van Der Wijck, Hamka)',
+			'"Bermimpilah dalam hidup, jangan hidup dalam mimpi." (Andrea Hirata)',
+			'Dan Tuhan memelihara ketidakpastian itu pada seluruh umat manusia agar manusia terus belajar, terus bermimpi dan ujung-ujungnya kita akan kembali padanya." (5 cm, Donny Dhirgantoro)',
+			'"Di saat kunikmati, hidup ini indah. Dan langsung pusing ketika mulai kupikirkan." (Pidi Baiq)',
+			'"Manusia sempurna adalah justru yang memiliki kekurangan dan kelebihan." (Pidi Baiq)',
+			'"Kita tak tahu dan tak pernah pasti tahu hingga semuanya berlalu. Benar atau salah, dituruti atau tidak dituruti, pada akhirnya yang bisa membuktikan cuma waktu." (Rectoverso)',
+			'"Orang-orang itu telah melupakan bahwa belajar tidaklah melulu untuk mengejar dan membuktikan sesuatu, namun belajar itu sendiri, adalah perayaan dan penghargaan pada diri sendiri." (Padang Bulan)',
+			'"Pegang tanganku, tapi jangan terlalu erat, karena aku ingin seiring dan bukan digiring." (Filosofi Kopi, Dee Lestari)',
+			'"Sekali dalam hidup orang mesti menentukan sikap. Kalau tidak, dia takkan menjadi apa-apa." (Bumi Manusia,Pramoedya Ananta Toer)',
+			'"Semua orang pernah gagal. Sebagian menyerah, sebagian bangkit kembali. Maka ada pecundang, ada pemenang." (Marshmallow Cokelat)',
+			'"Tampilkan kelemahan ketika kamu sedang kuat, dan kuatlah meski kuat sedang lemah." (The Art of War)',
+			'"Tidak ada niat yang baik yang boleh dicapai dengan cara buruk, dan sebaliknya tidak ada niat buruk yang berubah baik meski dilakukan dengan cara-cara baik." (Rembulan Tenggelam Diwajahmu)',
+			'"Berhentilah merasa hampa, berhentilah minta tolong untuk dilengkapi. Berhentilah berteriak-teriak ke sesuatu di luar sana. Berhentilah bertingkah seperti ikan di dalam kolam yang malah mencari-cari air. Apa yang Anda butuhkan semua sudah tersedia." (Supernova)',
+			'"Jika kamu mencari kesempurnaan, kamu tidak akan pernah tenang." (Leo Tolstoy, Anna Karenina)',
+			'"Kenapa harus takut gelap kalau ada banyak hal indah yang hanya bisa dilihat sewaktu gelap?" (Winter in Tokyo, Ilana Tan)',
+			'"Jika kita ibaratkan, maka peradaban manusia persis seperti roda. Terus berputar. Naik-turun. Mengikuti siklusnya." (Bidadari Bidadari Surga, Tere Liye)',
+			'"Dalam banyak hal kita tidak bisa memilih waktu terbaik. Saat sesuatu itu datang, kita hanya bisa bersiap menghadapinya." (Pergi, Tere Liye)',
+			'"Terkadang yang tak bisa kamu lupakan adalah seseorang yang tak pernah bisa kamu miliki." (All You Can Eat, Christian Simamora)',
+			'"Mungkin ada benarnya juga buku-buku itu bilang. Orang-orang yang jatuh cinta terkadang terbelenggu oleh ilusi yang diciptakan oleh hatinya sendiri." (Berjuta Rasanya, Tere Liye)',
+			'"Perempuan, kau pasti tahu sakitnya cinta yang tak terkatakan. Cinta yang hanya mampu didekap dalam bungkam, kata orang bahkan diam berbicara." (Emak Ingin Naik Haji, Asma Nadia)',
+			'"Cara yang paling mudah untuk tahu apakah kita cocok dengan orang tersebut atau tidak adalah ketika kita merasa lupa waktu." (Marmut Merah Jambu, Raditya Dika)',
+			'"Lepaskanlah. Maka besok lusa jika dia cinta sejatimu, dia pasti akan kembali dengan cara mengagumkan." (Rindu, Tere Liye)',
+			'"Mau ganteng atau tidak, kalau hatinya tidak satu frekuensi, bagaimana?" (Habibie & Ainun, B.J Habibie)',
+			'"Seseorang yang mencintaimu karena fisik, maka suatu hari ia juga akan pergi karena alasan fisik tersebut. Seseorang yang menyukaimu karena materi, maka suatu hari ia juga akan pergi karena materi. Tetapi seseorang yang mencintaimu karena hati, ia tidak akan pernah pergi! Karena hati tidak pernah mengajarkan tentang ukuran relatif lebih baik atau lebih buruk." (Tere Liye)',
+			'"Kita berdua mungkin punya kesamaan, kita sedang berlari. Aku berlari menuju sesuatu. Kamu berlari menjauhi sesuatu." (Rantau 1 Muara, Ahmad Fuadi)',
+			'"Kau boleh kecewa ditolak cinta, tetapi disebabkan oleh karena dia tidak mendapatkan dirimu yang ingin membahagiakannya." (Pidi Baiq)',
+			'"Sudah beberapa kali aku menjadi korban optimismeku sendiri dalam perkara cinta." (Elizabeth Gilbert; Eat, Pray, Love)',
+			'"Yang lemah tidak pernah bisa memaafkan. Pengampunan adalah atribut yang kuat." - Mahatma Gandhi',
+			' "Bukan gunung di depan untuk didaki yang membuatmu lelah, melainkan kerikil di sepatumu." - Muhammad Ali',
+			'"Jika kehidupan dapat diprediksi, maka kehidupan akan berhenti dan tanpa rasa." - Eleanor Roosevelt',
+			'"Jika kamu melihat apa yang kamu miliki dalam hidup, kamu akan selalu memiliki lebih banyak. Jika kamu melihat apa yang tidak kamu miliki dalam hidup, kamu tidak akan pernah merasa cukup." - Oprah Winfrey',
+			'"Hidup adalah yang terjadi saat kamu sibuk membuat rencana lain." - John Lennon',
+			'"Sebarkan cinta ke mana pun kamu pergi. Jangan biarkan orang lain mendatangimu tanpa mendapatkan hal yang lebih bahagia." - Bunda Teresa',
+			'"Ingatlah selalu bahwa kamu benar-benar unik. Sama seperti orang lain." - Margaret Mead',
+			'"Hal-hal terbaik dan terindah di dunia tidak dapat dilihat atau bahkan disentuh - semuanya harus dirasakan dengan hati." - Helen Keller',
+			'"Dia, yang tidak cukup berani untuk mengambil risiko, tidak akan mencapai apa pun dalam hidup." - Muhammad Ali',
+			'"Siapapun yang bahagia akan membuat orang lain juga bahagia." - Anne Frank',
+			' "Kita harus belajar untuk hidup bersama sebagai saudara atau kita akan binasa bersama-sama sebagai orang bodoh." - Martin Luther King',
+			'"Kemuliaan terbesar dalam hidup tidak terletak pada tidak pernah jatuh, tetapi dalam bangkit setiap kali kita jatuh." - Nelson Mandela',
+			'Ketika saya melepaskan diri saya yang sekarang, saya menjadi apa yang saya inginkan." - Lao Tzu',
+			'"Begitu kita menerima batasan kita, kita melampauinya." - Albert Einstein',
+			'Tiga hal dalam hidup - kesehatanmu, misimu dan orang yang kamu cintai." - Naval Ravikant',
+			'"Banyak dari kegagalan hidup adalah karena mereka tidak menyadari betapa dekatnya mereka dengan kesuksesan ketika mereka menyerah." - Thomas A. Edison',
+			'"Hanya mereka yang berani mengambil risiko melangkah terlalu jauh, yang mungkin bisa mengetahui seberapa jauh seseorang bisa melangkah." - TS Eliot',
+			'Saya suka mereka yang bisa tersenyum dalam kesulitan." Leonardo da Vinci',
+			'"Jangan menilai setiap hari dengan panen yang kamu tuai, tetapi dengan benih yang kamu tanam." - Robert Louis Stevenson',
+			'"Cintai hidup yang kau jalani. Jalani hidup yang kau cintai." - Bob Marley',
+			'"Hidup adalah petualangan yang berani atau tidak sama sekali." - Helen Keller',
+			'"Kedamaian tidak bisa dipertahankan dengan kekerasan; itu hanya bisa dicapai dengan pemahaman." - Albert Einstein',
+			'"Tidak ada kata terlambat untuk menjadi dirimu yang seharusnya." - George Eliot',
+			'"Ubah lukamu menjadi kebijaksanaan." - Oprah Winfrey',
+			'"Perjalanan seribu mil dimulai dengan satu langkah." - Lao Tzu',
+			'"Hidup itu sangat sederhana, tapi kita bersikeras untuk membuatnya menjadi rumit." - Konfusius',
+			'"Jika kamu ingin menjalani hidup yang bahagia, ikatlah dengan tujuan, bukan pada orang atau benda." - Albert Einstein',
+			'"Hidup adalah rangkaian pelajaran yang harus dijalani untuk dipahami." - Ralph Waldo Emerson',
+			'"Dalam hidup ini kita tidak bisa melakukan hal-hal besar. Kita hanya bisa melakukan hal-hal kecil dengan cinta yang besar." - Bunda Teresa',
+			'"Hidup terlalu penting untuk dianggap serius." - Oscar Wilde',
+			'"Jangan khawatir tentang kegagalan, khawatirkan tentang peluang yang kamu lewatkan ketika kamu bahkan tidak mencoba." - Jack Canfield',
+			'“Hidup itu sederhana, kita yang membuatnya sulit.” – Confucius.',
+			'“Hal yang paling penting adalah menikmati hidupmu, menjadi bahagia, apa pun yang terjadi.” - Audrey Hepburn.',
+			'“Pendidikan adalah senjata paling ampuh untuk mengubah dunia.” - Nelson Mandela',
+
+			'“Usaha dan keberanian tidak cukup tanpa tujuan dan arah perencanaan.” - John F. Kennedy',
+			'“Dunia ini cukup untuk memenuhi kebutuhan manusia, bukan untuk memenuhi keserakahan manusia.” - Mahatma Gandhi',
+			'“Anda mungkin bisa menunda, tapi waktu tidak akan menunggu.” - Benjamin Franklin',
+			'“Kamu tidak perlu menjadi luar biasa untuk memulai, tapi kamu harus memulai untuk menjadi luar biasa.” - Zig Ziglar',
+			'Tidak ada yang akan berhasil kecuali kau melakukannya.” - Maya Angelou',
+			'“Kamu tidak bisa kembali dan mengubah awal saat kamu memulainya, tapi kamu bisa memulainya lagi dari mana kamu berada sekarang dan ubah akhirnya.” - C.S Lewis',
+			'“Beberapa orang memimpikan kesuksesan, sementara yang lain bangun setiap pagi untuk mewujudkannya.” - Wayne Huizenga',
+			'“Pekerjaan-pekerjaan kecil yang selesai dilakukan lebih baik daripada rencana-rencana besar yang hanya didiskusikan.” - Peter Marshall',
+			'“Hal yang paling menyakitkan adalah kehilangan jati dirimu saat engkau terlalu mencintai seseorang. Serta lupa bahwa sebenarnya engkau juga spesial.” - Ernest Hemingway',
+			'“Beberapa orang akan pergi dari hidupmu, tapi itu bukan akhir dari ceritamu. Itu cuma akhir dari bagian mereka di ceritamu.” - Faraaz Kazi',
+			'“Seseorang tak akan pernah tahu betapa dalam kadar cintanya sampai terjadi sebuah perpisahan.” - Kahlil Gibran',
+			'“Cinta adalah ketika kebahagiaan orang lain lebih penting dari kebahagiaanmu.” - H. Jackson Brown',
+			'“Apa yang kita pikirkan menentukan apa yang akan terjadi pada kita. Jadi jika kita ingin mengubah hidup, kita perlu sedikit mengubah pikiran kita.” - Wayne Dyer.',
+			'“Tidak apa-apa untuk merayakan kesuksesan, tapi lebih penting untuk memperhatikan pelajaran tentang kegagalan.” – Bill Gates',
+			'"Betapapun sulitnya hidup, selalu ada sesuatu yang dapat kamu lakukan dan berhasil." - Stephen Hawking',
+			'"Orang pesimis melihat kesulitan di setiap kesempatan. Orang yang optimis melihat peluang dalam setiap kesulitan." - Winston Churchill',
+			'"Tidak ada rahasia sukses. Itu adalah hasil dari persiapan, kerja keras, dan belajar dari kegagalan." - Colin Powell',
+			'"Menang bukanlah segalanya, tetapi keinginan untuk menang adalah segalanya." - Vince Lombardi',
+			'"Kesuksesan dan kegagalan adalah sama-sama bagian dalam hidup. Keduanya hanya sementara." - Shah Rukh Khan',
+			'"Semua kehidupan adalah eksperimen. Makin banyak eksperimen yang kamu buat, makin baik." - Ralph Waldo Emerson',
+			'"Satu-satunya perjalanan yang mustahil adalah perjalanan yang tidak pernah Anda mulai." - Tony Robbins',
+			'"Hidup yang berharga adalah hidup yang dapat memberikan kehidupannya kepada orang lain." - Albert Einstein',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

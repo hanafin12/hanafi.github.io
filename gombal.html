@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Gombal"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Eh kamu mau tau gak menu baru yang paling aku impikan? Menua bersamamu hhe',
+			'Satu titik dua koma, kamu cantik gak ada tapinya.',
+			'Coba dengerin huruf vocal ini, a,i,e,o, coba huruf vocal apa yg hilang? u. mau tau engga kenapa? Bcz I keep u in my heart.',
+			' Coba dengerin huruf vocal ini, a,u,e,o, coba huruf vocal apa yg hilang? i. mau tau engga kenapa? Bcz u keep i in your heart.',
+			'Eh btw kamu ga cape gitu? Cape kenapa? ga cape gitu cantik terus?',
+			'Umur kamu berapa? Yah kita gak seumur ya, tapi walaupun gak seumur boleh dong ak seumur hidup sama kamu?',
+			'Menurut hukum newton semua benda yang jatuh ke bumi disebabkan oleh gaya gravitasi, kalau jatuhnya hatiku ke kamu itu disebabkan oleh apa ya?',
+			'Kamu mau tau gk bedanya jepang, jerman dan kamu, Jepang hebat dalam bikin robot, jerman bikin mobil, kalau kamu bikin kangen.',
+			'Hp ku xiaomi, kartu ku juga tri, gimana kalau kita jadi xiaomi is tri hehe',
+			'Hari minggu itu disebutnya weekend? Tapi kalau cinta aku ke kamu tuh keknya will never end.',
+			'If jesus can turn water into wine, can I turn u into mine?',
+			'Eh aku boleh manggil kamu jasmine engga? Engga, tapi kalau engga pake jas pasti boleh kan ya?',
+			'Boleh kirim foto kamu engga? Soalnya aku mau tunjukin ke nasa kalau ada yang lebih indah dari pada bintang',
+			'Eh kamu tau engga bedanya saya sama aku? Kalau saya dipake pas situasi formal. Kalau aku, orang yang bisa bikin kamu Bahagia.',
+			'Do yu love yourself? Yes I am, wah kayaknya kita suka sama orang yang sama.',
+			'Eh kamu tau engga kenapa di toy story woody selalu sama buzz? Karena kalau aku sama kamu itu nantinya bukan jadi toy story? Trus jadi apa? Jadinya love story.',
+			'Eh kamu apal no ktp kamu engga? Kalau no hp pasti apal dong?',
+			'Sarung atlas sarung wadimor, whateve ur past, I always love u more',
+			'Can I call you mistery without m?',
+			'Tukang tahu ngebanting kayu, gatau, I just cant stop thinking about you',
+			'Do you watch anime? U should try love anime without ani',
+			'Alphabet start with? Number start with? Melody start with? Can love start with you and i?',
+			'Apa bedanya cincin sama kamu? Kalau cincin melekat di jari, kalau kamu melekat di hati aku."',
+			'Kamu tau gak apa persamaannya kamu sama AC? Sama-sama bikin aku sejuk',
+			'Napas aku kok sesek banget ya?, karena separuh nafasku ada di kamu',
+			'Ikan apa yang bikin baper? Ikan stop loving you.',
+			'Apa bedanya kamu sama jam 12 siang? Kalau jam 12 siang itu kesiangan, kalau kamu itu kesayangan',
+			'Kos apa yang paling bikin betah? Bikos I love you.',
+			'Apa bedanya kamu sama barista? Barista mengaduk-aduk kopi susu, kalau kamu mengaduk-aduk hatiku',
+			'Eh pas ketemu kamu keknya ak mau ngubah namaku jadi Dion. Karena aku Donly man for you',
+			'Kipas apa yang aku tunggu? Kipastian dari kamu',
+			'Mie apa yang lebih nyenengin dari Indomie? Mielikin kamu',
+			'Kotak apa yang menyakitkan? Kotak sadar ku telah mencintaimu.',
+			'Apa perbedaan Saturnus sama kamu? Kalau saturnus cincinnya dari asterois, kalau kamu nanti cincinnya dari aku ',
+			'Apa perbedaan pizza sama kamu? Pizza buat Dibagi-bagi, kalau kamu buat aku seorang diri',
+			'Ibukota boleh pindah ke Kalimantan, asalkan kamu jangan pindah ke Hatimantan.',
+			'Tau gak perbedaan Mangga Dua sama kamu? Mangga Dua itu pusat perbelanjaan, kalau kamu itu pusat perhatianku',
+			'Apa perbedaan bendera sama kamu? Kalau bendera berkibar di tiang, kalau kamu berkibar dihatiku',
+			'Kamu tau gak bedanya kamu sama buku? Kalau buku gudangnya ilmu, kalau kamu gudangnya rindu',
+			'Berbagi santap sama kamu aja senang, apalagi berbagi atap?',
+			'Apa perbedaan nelayan sama kamu? Kalau nelayan memancing ikan, kalau kamu memancing perhatianku',
+			'Namamu bagus, tapi lebih bagus lagi kalau ada di kartu keluargaku.',
+			'Apa bedanya kamu dan polisi lalu lintas? Kalau polisi mengalihkan lalu lintas, kalau kamu mengalihkan duniaku',
+			'Apa bedanya Bali sama kamu? Kalau Bali itu tujuan wisata, kalau kamu itu tujuan hidup',
+			'Apa bedanya Borobudur sama kamu? Kalau Borobudur itu candi, kalau kamu itu candu',
+			'Cintaku padamu seperti bunga dalam utang. Awalnya kecil, didiemin, tau-tau gede sendiri.',
+			'Kamu tahu gak bedanya kamu sama daun? Kalau daun jatuhnya ke tanah, kalau kamu jatuhnya ke hatiku',
+			'Kalau kamu jadi senar gitar, aku nggak mau jadi gitarisnya. Karena aku nggak mau mutusin kamu',
+			'Kamu tahu apa persamaan rasa sayangku ke kamu dengan matahari? Persamaannya adalah sama-sama terbit setiap hari dan hanya akan berakhir sampai kiamat',
+			'Aku ingin bersamamu hanya dalam 2 waktu, yaitu sekarang dan selamanya.',
+			'Ngemil apa yang paling enak? Ngemilikin Kamu sepenuhnya',
+			'Berulang tahun memang indah. Tapi apa coba yang paling indah? Akan tetapi lebih indah jika berulang kali bersamamu',
+			'Kalau ada lampu jangan cari lilin, kalau ada aku jangan cari yang lain',
+			'Eh kamu tau engga semenjak ketemu kamu, ak pengen bikin buku bareng? Buku apa? Buku nikah.',
+			'Eh aku mau ngitung angka, 1,3,4,5? Eh btw tadi angka berapa ya yang engga ada? Dua? Kenapa ya? ohya soalnya kamu engga ada duanya',
+			'Tidak semua pohon hidup dalam kekeringan tapi kaktus bisa, tidak semua Wanita bisa membuat aku memutuskan menikahinya, tapi aku bisa',
+			'Seandainya kamu jadi maling, aku jadi hansipnya, karena sampai kapan pun aku selalu ngejar2 kamu',
+			'Kamu udah lapor pak RT belum? Kamu udah 24 jam ada di pikiran aku',
+			'Eh nama lengkap kamu apa? Tau engga kenapa ak tanya nama lengkap kamu? Biar nanti pas ijab qabul aku lancar nyebutnya',
+			'Eh kamu tau engga persamaan e ktp sama perasaan aku ke kamu? Masa berlakunya selamanya',
+			'Beraki rakit ke hulu Berenang renang ketepian, coba apa kelanjutan dari pantun itu? Aku siap ke penghulu biar kamu engga kesepian',
+			'Kamu tau engga bedanya pohon itu dengan kamu, pohon itu gk bisa hidup tanpa air, kalau aku engga bisa hidup tanpa kamu.',
+			'Hari ini hari apa sih? Bukan, hari ini kamu cantik banget',
+			'Eh kamu tau engga komet halley itu muncul 75 tahun sekali, tapi kamu lebih hebat dari komet halley, karena kamu hanya muncul sekali dalam hidup ku',
+			'Kamu bangga engga punya pahlawan seperti ibu ra kartini, aku yakin nanti anak2 aku juga akan bangga punya ibu seperti kamu.',
+			'Ada udang dibalik batu artinya,  aku mau jadi udang asal ada kamu dibalik batu',
+			'Bedanya motor sama aku, motor gabisa jalan kalau engga ada bensin, aku gk bisa jalan kalau engga ada kamu',
+			'Perbedaan piano sama aku, piano mengeluarkan nada2 indah, kalau aku bisa mengeluarkan rasa sayang untuk kamu',
+			'Kursi apa yang paling aku inginkan? Kursi dimana aku bisa duduk berdua sama kamu di pelaminan',
+			'panda apa yang paling imut dan manis? pandangin muka kamu',
+			'tong kosong nyaring bunyinya, kalau hati kamu kosong, boleh dong aku isinya',
+			'anjing menggonggong, khafilah berlalu, tiap hari aku bengong mikir kamu melulu',
+			'tinta apa yang gak bakalan pudar2? tintaku padamu.',
+			'If I could rearrange the alphabet, I’d put ‘U’ and ‘I’ together.',
+			' I believe in following my dreams. Can I have your Instagram?',
+			'I always thought happiness started with an ‘h,’ but it turns out mine starts with ‘u.’',
+			'Are you a time traveler? Because I absolutely see you in my future.',
+			' I’m not usually religious, but when I saw you, I knew you were the answer to my prayers.',
+			' I’m not currently an organ donor, but I’d be happy to give you my heart.',
+			' When I text you goodnight later, what phone number should I use?',
+			'may i ask u something? are u google? cuz u got everything im searching for ',
+			'forget about 34+35, will u be my only 35-34?',
+			'covid 19 cancelling everything except my feelings for u ',
+			'i stalked ur girlfriend/boyfriend instagram acc and it says edit profile',
+			'can i get direction? to where? ur heart',
+			'aku emang suka ga jelas,tapi kalau suka kamu sudah jelas',
+			'permisi boleh minta waktu? minta waktunya untuk seumur hidup',
+			'Your hair is really good, but I cant have hair as good as yours.  But, maybe our child can.',
+			'lemme tell u name of month, january february march april may u be mine? owwww',
+			'do you know whats on the menu? its me n u',
+			'apa persamaan indomie dan kamu? sama sama seleraku',
+			'"Do u know what the difference internet n u?If internet have 4 g but youre 4 me"',
+			'm : are u fine?yeah fineokayy u are fine, but lemme change the "f" to an "m"',
+			'from A—Z, do you know which one I would choose?i would choose U',
+			'youre half right? i mean- half fine half mine',
+			'There are 21 lettres in the alphabet right? Oh wait, I forgot 5 lettes, its U, R, A, Q, T',
+			'No more tears no more pain nomor whatsapp mu brpp?',
+			'Aku denger kamu pinter mtk. So can you replace my X without asking Y?',
+			'Your wedding will be amazing but the "y" is silent',
+			'i cant turn water into wine, but i can turn u into mine',
+			'Are u a keyboard?Mksd?Cause u r my type',
+			'Kamu tau gak bedanya angka 9 sama kamu?Nggak, apa tuh?Kalo 9 itu nine kalo kamu itu mine',
+			'are you a door? because you look a-door-able',
+			'Balonku ada lima,Rupa2 warnanya.Hijau kuning kelabu Merah muda I Miss You',
+			'kalau bareng sama kamu, aku engga mau naik gunung? kenapa? aku maunya naik ke pelaminan sama kamu?',
+			'Pada sebuah percobaan, dilemparkan 3 buah dadu secara bersamaan sebanyak 2 kali, hitunglah berapa banyak peluang saya bisa rebut hati kamu',
+			'cintaku padamu seperti semua bilangan yang dibagi dengan 0, sama dengan tak hingga',
+			'kamu terbuat dari tembaga dan tellurium ya? soalnya kamu cute',
+			'aku suka nomor satu, kamu tau kenapa? karena nanti di kartu keluarga yang nomor dua itu kamu',
+			'u cant drink wine, bu you can be mine',
+			'can i follow u? yea why, becaus my parent told me to follow my dream',
+			'kupu2 apa yang membanggakan banget? kupunya pacar seperti kamu',
+			'tau engga apa bedanya kamu dengan lukisan? kalau lukisan tambah lama tambah antik, kalau kamu tambah lama tambah cantik',
+			'micin apa yang rasanya manis? micintaimu',
+			'bedanya kamu sama modem? modem terkoneksi ke internet, kamu terkoneksi ke hatiku',
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

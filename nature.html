@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Alam&Perjalanan"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apa musim favoritmu?',
+			'Apa kegiatan favorit Anda saat masa kanak2 ketika cuaca panas?',
+			'Apa yang menyebabkan perubahan iklim? Apakah itu alami, atau kentut sapi, atau bahan bakar fosil? Bisakah kita menghentikannya?',
+			'Apakah kamu suka jalan jalan?',
+			'Apakah Anda sering bepergian?',
+			'Berapa banyak tempat (kota/negara/pulau) yang sudah kamu kunjungi?',
+			'Pernahkah Anda tinggal di banyak tempat? dimana saja?',
+			'Apakah Anda suka melakukan perjalanan yang “outdoor”? (Berkemah di tenda, berkemah di tempat terbuka)',
+			'Pernah mengendarai sepeda motor? paling jauh berapa lama dan kemana?',
+			'Apakah Anda lebih suka bepergian atau tinggal di dekat rumah?',
+			'Apa hal favorit Anda tentang pergi berlibur?',
+			'Apa hal yang paling tidak kamu sukai saat pergi berlibur?',
+			'Pernahkah Anda pergi berlibur sendiri?',
+			'Apa yang suka kamu lakukan ketika pergi ke pantai?',
+			'Apa yang suka kamu lakukan ketika pergi ke gunung?',
+			'Apa yang suka kamu lakukan ketika pergi ke berkemah?',
+			'Ke mana Anda ingin bepergian selanjutnya?',
+			'Ke mana Anda ingin bepergian jika kamu hanya diberi kesempatan satu kali berpergian lagi sebelum mati?',
+			'Berapa perjalanan pesawat terlama yang pernah Anda lakukan?',
+			'Apa cara terbaik untuk bepergian? (Pesawat, mobil, kereta api, dll.)',
+			'Apa tempat favorit Anda?',
+			'Di mana tempat paling santai yang pernah kamu kunjungi?',
+			'Anda memilih berpergian sendiri atau dalam grup?',
+			'Bagaimana pendapatmu tentang paket tur grup?',
+			'Apakah Anda lebih suka keluar jalur saat bepergian?',
+			'Apa tempat paling berlebihan/banyak dikunjungi tapi tidak sesuai harapan yang pernah Anda kunjungi?',
+			'Pernahkah Anda bepergian ke berbagai negara? ke mana saja?',
+			'Di mana tempat paling menakjubkan yang pernah Anda kunjungi?',
+			'Apa hal terbaik tentang bepergian? Bagaimana dengan hal terburuk?',
+			'Apa hotel terburuk yang pernah Anda kunjungi? jika hotel terbaik?',
+			'Bagaimana menurut Anda bepergian ke banyak negara/daerah/kota/pulau berbeda dapat mengubah seseorang?',
+			'Coba sampaikan cerita tentang beberapa orang menarik yang Anda temui saat bepergian.',
+			'Apa pendapat Anda tentang staycation? (Berlibur dan melihat-lihat tempat wisata tempat tinggal Anda/diam di hotel)',
+			'Di mana Anda mendapatkan rekomendasi tentang apa yang harus dilakukan dan tempat menginap saat bepergian?',
+			'Berapa lama Anda berada jauh dari rumah? Apakah Anda merasa rindu rumah?',
+			'Bagaimana Anda memilih ke mana harus pergi? Apakah Anda terinspirasi oleh cerita perjalanan orang lain? Atau foto? Atau iklan?',
+			'Apa yang lebih penting bagi Anda saat bepergian - kenyamanan dan relaksasi, atau merangsang pengalaman baru?',
+			'Apakah Anda suka mencoba makanan lokal ketika Anda pergi ke suatu tempat? Pernahkah Anda mendapatkan sesuatu yang sangat lezat? coba ceritakan tentang hal itu.',
+			'Hal-hal buruk bisa terjadi saat Anda bepergian. Apakah Anda memiliki pengalaman perjalanan yang buruk?',
+			'Apa yang Anda bawa saat bepergian? Apakah Anda mencoba berkemas ringan?',
+			'Tempat mana di dunia yang menurut Anda terlalu berbahaya untuk dikunjungi? Mengapa mereka berbahaya?',
+			'Apa hal terbaik untuk dilakukan pada hari musim hujan?',
+			'Berapa usia terbaik untuk bepergian? Bisakah anak-anak menghargai pengalaman itu?',
+			'Apa keuntungan dan kerugian bepergian sendiri?',
+			'Jenis akomodasi apa yang Anda pilih untuk menginap ketika Anda pergi ke suatu tempat? Apakah Anda pernah menginap di akomodasi Airbnb?',
+			'Apakah Anda suka berbicara dengan orang lokal saat bepergian? Mengapa atau mengapa tidak?',
+			'Apakah Anda ingin pergi ke acara internasional besar, seperti Olimpiade atau festival film internasional? Apa hal baik atau buruk apabila menghadiri acara seperti itu?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Investasi"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apa itu investasi?',
+			'pandanganmu tentang investasi?',
+			'pernah investasi? investasi apa?',
+			'pernah ikut investasi bodong?',
+			'percaya engga kalau kita bisa bakalan dapat uang tiap bulan tanpa kerja dengan investasi?',
+			'punya tujuan keuangan yang ingin dicapai?',
+			'udah nyiapin dana darurat? berapa besarannya?',
+			'udah nyiapin dana peniun?',
+			'ada niatan untuk investasi? atau belajar investasi? rencananya pengen investasi dimana?',
+			'tau engga alesan kita harus investasi itu karena inflasi?',
+			'tau engga nilai uang sekarang itu beda dengan nilai uang di masa depan? atau konsep time value of money?',
+			'menurut kamu budgeting itu penting engga?',
+			'menurut kamu track pengeluaran itu penting engga?',
+			'tau tentang profil risiko? kalau tau profil risiko kamu apa?',
+			'percaya engga kalau semua orang kaya itu kaya karena investasi?',
+			'tau diverifikasi dalam investasi?',
+			'tau engga kalau semua investasi itu ada risiko kerugiannya',
+			'kalau kamu mengalami kerugian dalam investasi? apa yang kamu lakukan?',
+			'percaya engga kalau investasi itu engga perlu modal yang banyak?',
+			'kalau investasi itu harus kelola sendiri ya? soalnya saya engga punya waktu buat mengelolanya',
+			'cara tau investasi yang aman itu kek gimana?',
+			'berapa uang yang kamu sisihkan untuk ditabung/investasi? berapa persen dari gaji?',
+			'punya utang? berapa cicilannya? utang konsumtif atau produktif?',
+			'apa sih bedanya keinginan sama kebutuhan?',
+			'punya asuransi? asuransi apa? kenapa milih itu?',
+			'punya berapa rekening bank? punya berapa e wallet?',
+			'punya akun di berapa sekuritas?',
+			'pernah ngitung kekayaan bersih pribadi tidak?',
+			'saat dapet gaji, ngasih ke ortu berapa persen?',
+			'bisa bedain kebutuhan rutin atau tidak rutin?',
+			'bisa bedain kebutuhan yang wajib dipenuhi sama bisa ditunda?',
+			'apa kamu pernah cari kegiatan yang menghasilkan uang sampingan?',
+			'pernah kepikiran buat bisnis? bisnis apa?',
+			'berapa banyak pengeluaran tiap bulan?',
+			'tau deposito?',
+			'tau logam mulia emas batangan? tau ada perbedaan harga jual dan beli? emas anti inflasi? harga emas sejak zaman nabi',
+			'tau reksadana? keuntungan reksadana dari mana? macam2 reksadana? tempat beli reksadana?',
+			'tau saham? keuntungan dari saham? risiko saham? cara beli saham?',
+			'tau investasi di properti?',
+			'tau p2p lending? bedanya sama yg di bank? risiko nya apa sih? keuntungannya?',
+			'tau deposito? risiko? maksimal yg dijamin? pernah nyoba?',
+			'tau obligasi atau sukuk? risikonya? kenapa ada sukuk atau obligasi? kelebihan kekurangan?',
+			'tau crypto? sistem blockchain?',
+			'tau fitur autodebit?',
+			'tau strategi investasi lump sum atau dca?',
+			'kamu sandwich generation?',
+			'tau makna uang dingin atau uang panas?',
+			'tau perbedaan pola keuangan pra sejahtera, menengah dan atas?',
+			'tau investasi terbaik di dunia? dan kenapa terbaik?',
+			'tau investasi paling penting bagi muslim?',
+			'punya tujuan buat financial freedom?',
+			'mau bekerja sampai umur berapa?',
+			'pas pensiun mau ngapain aja?',
+			'tau bedanya hutang produktif dan hutang konsumtif?',
+			'tau latte factor dalam pengeluaran?',
+			'tau persentase budgeting yang sering dipake banyak orang?',
+			'tau engga kalau kita bisa investasi di saham luar negeri?',
+			'tau piramida perencanaan keuangan?',
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

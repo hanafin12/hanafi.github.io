@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan Quotes</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'"Genius is one percent inspiration and ninety-nine percent perspiration."-Thomas Edison',
+			'"You can observe a lot just by watching."-Yogi Berra',
+			'"A 	house divided against itself cannot stand."-Abraham Lincoln',
+			'"Difficulties increase the nearer we get to the goal."-Johann Wolfgang von Goethe',
+			'"Fate is in your hands and no one elses"-Byron Pulsifer',
+			'"Be the chief but never the lord."-Lao Tzu',
+			'"Nothing happens unless first we dream."-Carl Sandburg',
+			'"Well begun is half done."-Aristotle',
+			'"Life is a learning experience  only if you learn."-Yogi Berra',
+			'"Self-complacency is fatal to progress."-Margaret Sangster',
+			'The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela',
+			'The way to get started is to quit talking and begin doing. -Walt Disney',
+			'Your time is limited, so dont waste it living someone elses life. Dont be trapped by dogma – which is living with the results of other peoples thinking. -Steve Jobs',
+			'If life were predictable it would cease to be life, and be without flavor. -Eleanor Roosevelt',
+			'If you look at what you have in life, youll always have more. If you look at what you dont have in life, youll never have enough. -Oprah Winfrey',
+			'If you set your goals ridiculously high and its a failure, you will fail above everyone elses success. -James Cameron',
+			'Life is what happens when youre busy making other plans. -John Lennon',
+			'Spread love everywhere you go. Let no one ever come to you without leaving happier. -Mother Teresa',
+			'Always remember that you are absolutely unique. Just like everyone else. -Margaret Mead',
+			'Dont judge each day by the harvest you reap but by the seeds that you plant. -Robert Louis Stevenson',
+			'The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt',
+			'Tell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin Franklin',
+			'The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart. -Helen Keller',
+			'It is during our darkest moments that we must focus to see the light. -Aristotle',
+			'Whoever is happy will make others happy too. -Anne Frank',
+			'Do not go where the path may lead, go instead where there is no path and leave a trail. -Ralph Waldo Emerson',
+			'"Life is never fair, and perhaps it is a good thing for most of us that it is not." -Oscar Wilde',
+			'"The only impossible journey is the one you never begin." -Tony Robbins',
+			'"Only a life lived for others is a life worthwhile." -Albert Einstein',
+			'"The purpose of our lives is to be happy." -Dalai Lama',
+			'"You only live once, but if you do it right, once is enough." -Mae West',
+			'"Life is really simple, but we insist on making it complicated." -Confucius',
+			'I find that the harder I work, the more luck I seem to have. -Thomas Jefferson',
+			'I have no special talent. I am only passionately curious. Albert Einstein',
+			'Stay hungry, stay foolish. Steve Jobs',
+			'Insanity: doing the same thing over and over again and expecting different results. Albert Einstein',
+			'The greatest wealth is to live content with little. Plato',
+			'The future belongs to those who prepare for it today. Malcolm X',
+			'The successful warrior is the average man, with laser-like focus. Bruce Lee',
+			'In order to be irreplaceable one must always be different. Coco Chanel',
+			'"Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning." -- Albert Einstein',
+			'"If you are not willing to risk the usual, you will have to settle for the ordinary."- Jim Rohn',
+			'"Courage is grace under pressure." -- Ernest Hemingway',
+			' "Take up one idea. Make that one idea your life -- think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body be full of that idea, and just leave every other idea alone. This is the way to success." -- Swami Vivekananda',
+			' "Someone is sitting in the shade today because someone planted a tree a long time ago." -- Warren Buffett',
+			'"Whenever you see a successful person, you only see the public glories, never the private sacrifices to reach them." -- Vaibhav Shah',
+			'"Dont cry because its over, smile because it happened." -- Dr. Seuss',
+			'"Try not to become a person of success, but rather try to become a person of value." -- Albert Einstein',
+			'"Opportunities dont happen. You create them." -- Chris Grosser',
+			'"It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change." -- Charles Darwin',
+			'"Great minds discuss ideas; average minds discuss events; small minds discuss people." -- Eleanor Roosevelt',
+			'"The best revenge is massive success." -- Frank Sinatra',
+			'"I have not failed. Ive just found 10,000 ways that wont work." -- Thomas Edison',
+			'"The whole secret of a successful life is to find out what is ones destiny to do, and then do it." -- Henry Ford',
+			'"If you cant explain it simply, you dont understand it well enough."- Albert Einstein',
+			'"You cant please everyone, and you cant make everyone like you." -- Katie Couric',
+			' "Start where you are. Use what you have. Do what you can." -- Arthur Ashe',
+			'"Dont limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember, you can achieve."-Mary Kay Ash',
+			'"The two most important days in your life are the day you are born and the day you find out why." -- Mark Twain',
+			'"Success is the sum of small efforts, repeated day-in and day-out."- Robert Collier',
+			'"As you grow older, you will discover that you have two hands, one for helping yourself, the other for helping others." -- Audrey Hepburn',
+			' "If your actions inspire others to dream more, learn more, do more, and become more, you are a leader." -- John Quincy Adams',
+			'"All progress takes place outside the comfort zone." -- Michael John Bobak',
+			'"The biggest risk is not taking any risk... In a world thats changing really quickly, the only strategy that is guaranteed to fail is not taking risks." -- Mark Zuckerberg',
+			'"Be yourself. Everyone else is already taken." -- Oscar Wilde',
+			'"To be successful, you must accept all challenges that come your way. You cant just accept the ones you like." -- Mike Gafka',
+			'"Be patient with yourself. Self-growth is tender; it is holy ground. There is no greater investment." -- Stephen Covey',
+			'"An investment in knowledge pays the best interest." — Benjamin Franklin',
+			'"Bottoms in the investment world dont end with four-year lows; they end with 10- or 15-year lows." — Jim Rogers',
+			'"I will tell you how to become rich. Close the doors. Be fearful when others are greedy. Be greedy when others are fearful." — Warren Buffett',
+			'"With a good perspective on history, we can have a better understanding of the past and present, and thus a clear vision of the future." — Carlos Slim Helu',
+			'"It is not whether you are right or wrong that is important, but how much money you make when you are right and how much you lose when you are wrong." — George Soros',
+			'"The stock market is filled with individuals who know the price of everything, but the value of nothing." — Phillip Fisher',
+			'In investing, what is comfortable is rarely profitable." — Robert Arnott',
+			'"How many millionaires do you know who have become wealthy by investing in savings accounts? I rest my case." — Robert G. Allen',
+			'The individual investor should act consistently as an investor and not as a speculator." — Ben Graham',
+			'"The biggest risk of all is not taking one." — Mellody Hobson',
+			'"Returns matter a lot. It is our capital." — Abigail Johnson',
+			'"It is not how much money you make, but how much money you keep, how hard it works for you, and how many generations you keep it for." — Robert Kiyosaki',
+			'"Know what you own, and know why you own it." — Peter Lynch',
+			'"Financial peace isn it the acquisition of stuff. It is learning to live on less than you make, so you can give money back and have money to invest. You cant win until you do this." — Dave Ramsey',
+			'"Wide diversification is only required when investors do not understand what they are doing." — Warren Buffett',
+			'“The rich invest in time, the poor invest in money.” Warren Buffet',
+			'“Never depend on a single income, make an investment to create a second source.” Warren Buffet',
+			' “Do not save what is left after spending but spend what is left after saving.” Warren Buffet',
+			'“Everyone wants a piece of land. It’s the only sure investment, it can never depreciate like a car or a washing machine.” Russel Sage',
+			'“In any investment, you expect to have fun and make money.” Michael Jordan',
+			'“Do not put all your eggs in one basket.” Warren Buffet',
+			' “An investor without investment objectives is like a traveler without a destination.” Anonymous',
+			'“Invest in yourself, you can afford it, trust me.” Rashon Carraway',
+			'“Sometimes your best investments are the ones you don’t make.” Donald Trump',
+			'“The price of a commodity will never go to zero. When you invest in commodities futures, you are not buying a piece of paper that says you own an intangible of a company that can go bankrupt.” Jim Rogers',
+			'“Investment is an asset or item that is purchased with the hope that it will generate income or appreciate in the future.” Anonymous',
+			'“Wealthy people invest first and spend what’s left and broke people spend first and invest what’s left.” Anonymous',
+			'“Earn as much as you can, save as much as you can, invest as much as you can, give as much as you can.” John Wesley',
+			'“90% of all millionaires become so through owning real estate.” Andrew Carnegie',
+			'“To be a successful business owner and investor, you have to be emotionally neutral to winning and losing Winning and losing are just part of the game.” Robert Kiyosaki',
+			'“Goodness is the only investment that never fails.” Henry David Thoreau',
+			'“If you buy things you do not need, soon you will have to sell things you need.” Warren Buffet',
+			'“Wise spending is part of wise investing. And it’s never too late to start.” Rhonda Katz',
+			'“The wisest rule in investment is: when others are selling, buy. When others are buying, sell.” Jonathan Sacks',
+			'“Never test the depth of the river with both of your feet.” Warren Buffet',
+			'“The philosophy of the rich and the poor is this: the rich invest their money and spend what is left. The poor spend their money and invest what is left.” Robert Kiyosaki',
+			'“An investment in knowledge pays the best interest.” Benjamin Franklin',
+			'“Don’t work for money; make it work for you.” Robert Kiyosaki',
+			' “You cannot save time for future use. But you can invest it for the future you.” Anonymous',
+			'“Rule #1: Never lose money; Rule #2: Don’t forget rule #1.” Warren Buffet',
+			'“When you invest, you are buying a day that you don’t have to work.” Aya Laraya',
+			' “Risk comes from not knowing what you are doing.” Warren Buffet',
+			'“Investing time in yourself is the only safe investment that will give you maximum return throughout life.” Lyrikal',
+			'Some of your activities should be viewed as an investment and not a sacrifice.” Anonymous',
+			'“The wise young man or wage earner of today invests his money in real estate.” Andrew Carnegie',
+			'“An investment in education is an investment in our future.” David Wasinger',
+			'“If you want your children to turn out well, invest twice as much time with them and half as much money.” Abigail Van Buren',
+			'“Formal education will make you a living; self-education will make you a fortune.” Jim Rohn',
+			'“The best gift, and investment, you can give your child is your time.” Kevin Heath',
+			'“You will come to know that what appears today to be a sacrifice will prove to be the greatest investment that you will ever make.” Gordon B. Hinkley',
+			' “If you want to be truly successful, invest in yourself to get the knowledge you need to find your unique factor. When you find it and focus on it and persevere your success will blossom.” Sydney Madwed',
+			'“If you do not know how to care for money, money will stay away from you.” Robert T. Kiyosaki',
+			'“Investing puts money to work. The only reason to save money is to invest it.” Grant Cardone',
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

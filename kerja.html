@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Kerja&Networking"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apakah pekerjaan dari jam 8-5 diperlukan untuk bertahan hidup?',
+			'Jika Anda bisa kaya seperti A yang mengerjakan pekerjaan yang Anda benci, apakah Anda akan melakukannya?',
+			'Jika sebuah pekerjaan membuat Anda jauh dari keluarga tetapi membayar dengan baik, apakah itu sepadan?',
+			'Jika seseorang berbohong tentang Anda di tempat kerja, apakah Anda akan membiarkannya, atau akankah Anda melawannya?',
+			'Apakah Anda lebih suka bekerja di perusahaan terkenal, dan menjadi terkenal, meskipun Anda tidak menghasilkan banyak uang? Atau apakah Anda lebih suka bekerja untuk perusahaan tidak dikenal yang tidak memiliki reputasi, dan menghasilkan banyak uang?',
+			'Jika Anda menemukan bahwa seseorang telah memberi Anda cuti selama seminggu, tidak hanya gratis dan jelas tetapi dengan bayaran ekstra, apa yang akan Anda lakukan selama minggu itu?',
+			'Apa yang membuat Anda memilih ini sebagai karir Anda?',
+			'Apa hal paling menarik yang Anda kerjakan akhir-akhir ini?',
+			'Apa yang paling Anda sukai dari pekerjaan Anda?',
+			'Apa pekerjaan pertama Anda?',
+			'Apa kegiatan yang membuat anda akan melakukan sepenuh hati dan melakukan dengan sebaik mungkin',
+			'Berapa lama Anda berada di pekerjaan Anda saat ini?',
+			'Menurut Anda mengapa Anda dipekerjakan?',
+			'Apa tujuan Anda dalam bekerja?',
+			'Apa yang menginspirasi Anda di tempat kerja setiap hari?',
+			'Lebih suka tinggal di kota atau di desa? Mengapa?',
+			'Jika Anda dapat mengubah satu hal tentang industri tempat kerja Anda ini, apakah itu?',
+			'Siapa yang menjadi panutan karir Anda?',
+			'Apa hal paling menarik yang Anda pelajari di tempat kerja?',
+			'Apakah Anda pernah bepergian untuk pekerjaan Anda? Kemana saja kamu?',
+			'Bagaimana Anda membuat diri Anda teratur setiap hari?',
+			'Beri tahu saya saran terbaik Anda terkait pekerjaan?',
+			'Berapa banyak email yang Anda hindari untuk dijawab minggu ini?',
+			'Menurut Anda apa yang membuat seseorang menjadi manajer yang hebat?',
+			'Apakah Anda percaya pada keberuntungan atau apakah Anda percaya bahwa orang membuat keberuntungan mereka sendiri?',
+			'Jika uang bukan masalah, apa yang akan Anda lakukan dengan hidup Anda?',
+			'Apa hal yang belum pernah kamu lakukan tetapi ingin kamu coba lakukan?',
+			'Apa tantangan terbesar yang Anda hadapi tahun ini?',
+			'Apa proyek favorit Anda yang telah Anda kerjakan sejauh ini?',
+			'Dalam datang untuk bekerja apakah Anda biasanya datang lebih awal, terlambat, atau tepat waktu?',
+			'Apa yang menurut Anda paling bermanfaat tentang acara networking?',
+			'Apa pekerjaan impian Anda?',
+			'Apakah Anda suka bekerja lembur?',
+			'Apakah Anda suka bekerja di dalam ruangan?',
+			'Apakah Anda suka bekerja di luar ruangan?',
+			'Apakah Anda menyukai pekerjaan Anda?',
+			'Apa yang memotivasi seseorang untuk mengubah pekerjaannya?',
+			'Bisakah Anda menggambarkan beberapa orang yang bekerja dengan Anda?',
+			'Bisakah Anda menggambarkan pekerjaan Anda saat ini?',
+			'Apakah Anda menyukai bos Anda?',
+			'Bagaimana suasana di tempat kerja Anda?',
+			'Berapa lama Anda berencana untuk terus bekerja di tempat Anda berada?',
+			'Apakah Anda harus bekerja lembur? Jika demikian, seberapa sering?',
+			'Apakah Anda harus bekerja di akhir pekan?',
+			'Apakah Anda pernah menganggur? Berapa lama?',
+			'Apakah Anda pernah dipecat dari pekerjaan? Kapan? Mengapa?',
+			'Apa cara terbaik untuk mencari pekerjaan?',
+			'Apakah Anda biasanya mencari pekerjaan ketika Anda sedang mencari pekerjaan?',
+			'Mengapa Anda berhenti dari pekerjaan pertama Anda?',
+			'Apakah Anda menyukai pekerjaan pertama Anda?',
+			'Apa yang paling Anda sukai dan tidak sukai dari pekerjaan pertama Anda?',
+			'Berapa banyak uang yang Anda peroleh dari pekerjaan pertama Anda?',
+			'Apakah Anda punya saran untuk Pencari Kerja?',
+			'Berapa lama Anda ingin bekerja?',
+			'Berapa banyak uang yang ingin Anda hasilkan?',
+			'Pekerjaan apa yang ingin Anda miliki?',
+			'Apakah Anda ingin bekerja di akhir pekan?',
+			'Pekerjaan apa yang pernah Anda kerjakan?',
+			'rencana apa yang telah Anda buat untuk masa pensiun Anda?',
+			'Berapa banyak uang yang Anda pikir Anda butuhkan untuk pensiun?',
+			'Apa bagian favorit dan paling tidak favorit Anda dalam seminggu?',
+			'Apakah Anda khawatir tentang masa depan?',
+			'Apakah Anda mengharapkan masa pensiun Anda sangat berbeda dengan gaya hidup saat ini?',
+			'Apa yang ingin Anda lakukan saat pensiun?',
+			'Anda ingin hidup sampai usia berapa?',
+			'SApa yang Anda harapkan untuk dinikmati di masa pensiun Anda?',
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

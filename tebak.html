@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Tebak2-an"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Seorang pria terjebak di dalam gua, ia kebingungan karena gua tersebut gelap. Di tangannya ada lilin dan obor. Apa yang harus ia nyalakan terlebih dahulu? Korek api.',
+			'Gang apa yang selalu bikin ibu-ibu kesel? Gang-guin suaminya.',
+			'Ada orang sedang mencari sesuatu datang bersih pulang babak belur. Apa yang sebenarnya dia cari? Orang yang lagi cari masalah.',
+			'Benda kecil apa yang bisa ngeluarin orang? Bel Rumah.',
+			'Belajar bahasa Mandarin, lantai basah artinya apa? Lhi Chin.',
+			'Kenapa dalang membawa keris ketika pertunjukan wayang? Karena kalau bawa kompor, istrinya gak bisa masak',
+			'Waktu hidup dinyanyikan, pas mati dikasih tepuk tangan? Lilin Ulang Tahun.',
+			'Apa bedanya orang kurus dengan orang gemuk? Kalo orang kurus makan hati, sedangkan kalo orang gemuk makan tempat.',
+			'Daun apa yang tidak pernah gugur? Daun telinga.',
+			'Lemari apa yang bisa masuk ke dalam saku? Lema ribuan.',
+			'Tamunya sudah masuk, tapi yang punya malah keluar. Apakah itu? Tukang becak lagi narik penumpang',
+			'Tau gak angin warnanya apa? Merah. Coba lihat hasil kerokan di badan orang yang sedang masuk angin.',
+			'Siapakah yang suka naik angkot, tetapi tidak pernah bayar angkot? Supir angkot/kenek angkot',
+			'Kenapa di komputer ada tulisan enter? Karena kalo tulisannya entar, programnya ngga jalan-jalan, dong.',
+			'malam apa yang sangat mengerikan dan menakutkan? Maklam-pir.',
+			'Pintu apa yang didorong oleh 7 orang tidak bisa terbuka? Pintu yang ada tulisannya "GESER".',
+			'Penyanyi luar negeri yang suka sepedaan? Selena Gowes.',
+			'Ada bebek 10 di kali 2, jadi berapa? Jadi 8, soalnya kan yang 2 ada di kali.',
+			'Siapa penyanyi yang gak suka ngebut? Melly Goes Slow.',
+			'Penyanyi luar negeri yang susah nelen? Ed sered.',
+			'Bila gajah jadi ayam, lalu singa jadi ayam, dan kambing jadi ayam, maka ayam jadi apa? Ayam jadi banyak dong',
+			'Kutu jenis yang amat mengerikan? Kutu-kan.',
+			'Kenapa di rel kereta api ditaruh batu? Soalnya kalau ditaruh duit nanti pada diambil.',
+			'Ayam apa yang bikin sebel? Ayamnya habis, tapi nasinya masih banyak',
+			'Pemain bola apa yang beratnya 3 kg? Bambang tabung gas',
+			' Cuaca sedang mendung. Ada 5 orang tapi hanya ada 1 payung. Bagaimana caranya agar mereka semua tidak kehujanan? Tinggal jalan saja, kan baru mendung, belum hujan',
+			'Dua pria mencoba menyeberangi sungai dengan perahu yang hanya mampu mengangkut satu orang. Namun, keduanya berhasil menyeberangi sungai. Bagaimana itu bisa terjadi? Mereka berada di tepi sungai yang berbeda.',
+			'Kenapa zombie kalau nyerang musti bareng-bareng? Karena kalau sendiri namanya zomblo.',
+			'Ada ayam lima, dikali dua. Berapa semuanya? 5 dong, soalnya yang di kali 2, yang di darat 3.',
+			'Jika ada 1 kilo batu dan ada 1 kilo kapas, ketika dijatuhkan ke atas kaki, apa yang lebih sakit? Kaki kita',
+			'Posisiku ada di depan ibu, tetapi suka bersembunyi di belakang televisi. Aku bisa hidup di tengah air. Tapi, kalau ayah datang, aku akan menghilang. Siapakah aku? Huruf i',
+			'Mana yang lebih berat, kapas 100 kg atau besi 100 kg? Sama aja, sama-sama 100 kg',
+			'Gang apa yang selalu bikin ibu-ibu kesel? Gang-guin suaminya',
+			'Jika dibutuhkan waktu 10 menit untuk merebus 1 butir telur, berapa waktu yang diperlukan untuk merebus 5 butir telur? Tetap 10 menit, tinggal rebus saja secara bersama-sama',
+			'Apakah huruf keempat dalam abjad? Huruf a',
+			'Aku selalu ada di atas presiden dan menteri, tapi aku tidak punya jabatan apapun dalam pemerintahan. Siapakah aku? Peci',
+			'Ikan apa yang bisa terbang hayo? lele lawar',
+			'Hewan apa ya yang banyak keahlian? kukang Ada kukang tambal ban, kukang servis motor, kukang ngomporin temen juga ada. Ups.',
+			'Buah apa yang bikin senyum terus? buahagiain kamu',
+			'Sayur apa yang paling dingin? kembang cold',
+			'Burung apa yang hobi ke WC hayo? burung pipitss',
+			'Sayur apa yang muncul di akhir film? tomat',
+			'Siput apa yang engga bisa lihat? Siputa dari gua hantu',
+			'Ayam apa yang paling besar? ayam semesta',
+			'Hewan apa yang nggak pernah salah? kucing ga wrong',
+			' Buah apa yang bisa nampung banyak barang? leci, leci meja',
+			'Sayur apa yang bisa nyanyi? kol, kolplay',
+			'Hewan apa yang kalau diinjak nggak marah? kera mik',
+			'Kesenian apa yang selalu dilakukan oleh nasabah bank, ayo? tari tunai',
+			'Kota apa yang banyak bapak-bapaknya? purwodaddy',
+			'Gendang apa yang nggak bisa dipukul? gendang telinga',
+			'nama daerah yang sangat beracun? toxicmalaya',
+			'Hewan apa yang cuma terdiri dari dua huruf? u dan g',
+			'Uang 100 ribu kalau dilempar jadi apa hayo? jadi rebutan',
+			'hewan yang paling berjasa? buffalo',
+			'Pocong apa yang paling jadi favorit ibu-ibu? pocongan harga',
+			'gajah apa yang paling baik? gajahat',
+			'Pendekar yang sering ngebantu orang? si buta dari gua bantu',
+			'tau gak kenapa kalau saya naik motor suka ketawa2? karena saya duduk diatas jokes',
+			'tau gak kenapa saya pas ke apotek beli obat tidur, pas naik motor saya bawanya pelan2? karena takut obatnya bangun',
+			'pasien yang terkena gejala rindu dilarikan kemana hayo? ke ruang i see you',
+			'kendaraan apa yang imut kalau lagi jalan? kereta api cute cute cute',
+			'coba kenapa tadi siang beli nasi padang 2 porsi, tapi masih laper? karena belum dimakan',
+			'bapak2 mohon infonya kalau buku nikah hilang, bikin lagi atau nikah lagi?',
+			'panci apa yang suka jalan2? panci petualang',
+			'Pak bapak, tau gak kenapa pembuatan tahu lama?Karena bahan bakunya ke-delay',
+			'Dia membuat karya, pas jadi hasil karya tersebut diinjak-injak tidak marah, siapa coba? pembuat sandal ',
+			'Selain uang benda apa yang sering dicari-cari orang? benda hilang',
+			'Kenapa ketika naik taksi kita tidak boleh bayar uang dulu? karena uang dulu sudah tidak laku',
+			'Hewan apa yang bersaudara? katak adik',
+			'Kucing apa yang kuno? kucinggalan jaman',
+			'Kalau ayam berkokok, berarti harimau….? harimau pagi',
+			'superhero apa yang terbuat dari air? aironman',
+			'sayur apa yang punya kekuatan super? sawiderman',
+			'istri apa yang kecil? microwife',
+			'permen apa yang paling besar? candy borobudur',
+			'penyanyi yang muncul habis ashar? mulan jam lima',
+			'huruf apa yang sering kedinginan? b karena diantara AC',
+			'minuman apa yang sudah hijrah? nutri syari',
+			'permainan tradisional apa yang gak boleh dimainin oleh anak kecil sendiri? kelereng, kelereng gunung',
+			'aplikasi yang ngagetin? thinder',
+			'danau apa yang tidak cocok untuk anak? toba, buat anak kok toba2',
+			'binatang apa yang suka ada di pom bensin? belalang, belalang merokok',
+			'daerah di indonesia yang gak sabaran? cikarang',
+			'tau engga namanya nyamuk siapa? tatang, tatang seekor nyamuk',
+			'buah buah apa yang ga seger? alpucat',
+			'tukang apa yang posesif? tukang sol capa tu',
+			'penyanyi apa yang suka ngajakin main ayunan? mau di ayun engga?',
+			'wapres yang sering streming video? muhammad youtube kalla',
+			'presidan apa yang sering ngasih promo? j.co wi',
+			'artis yang emosian? anjasmaramara',
+			'penyanyi yang punya banyak temen? glenn friendly',
+			'penyanyi apa yang bisa stand up? uus dahlia',
+			'artis yang suka kenalan? adipati salken',
+			'penyanyi yg hobi mikir? ayu thinking',
+			'penyanyi yang suka ngegas? anji',
+			'penyanyi apa yang ada di setiap warkop? charly es teh dua gelas',
+			'band apa yang namanya mengandung peribahasa? the sigit demi the sigit lama2 jadi bukit',
+			'artis yang ditunggu2 di bulan ramadhan? afgan magrib',
+			'penyanyi apa yang suka uang? fulus',
+			'yutuber apa yang jualan handphone? edho cell',
+			'stand up comedy yang ga pernah mandi? raditya daki',
+			'yutuber yang suka ngehayal? atta halulintar',
+			'panci apa yang bisa nangkap ikan? pancingan',
+			'sebutkan nama2 buah dalam satu detik? rujak',
+			'apa bahasa jepangnya diskon? takazimura',
+			'kenapa ayam merem kalau berkokok? karena sudah hafal lirik',
+			'buah apa yang paling ditakutin mahasiswa? belimbing, belimbingan skripsi',
+			'bagian hari apa yang paling ditakutin mahasiswa? siang skripsi',
+			'mobil tabrakan di jalan tol, yang turun duluan apa? spedometer',
+			'kayu apa yang bisa dimakan? kayupuk',
+			'ikan apa yang gak bisa berenang? ikan mati',
+			'ayam apa yang paling besar? ayam semesta',
+			'buah apa yang suka dipakai perang? jambu runcing',
+			'coba tebak, lele apa yang bisa buat pacar kamu ngambek? lelet',
+			'lele apa yang bisa bunyi? lelepon',
+			'sandal apa yang dimakan? sandal terasi',
+			'belut apa yang engga disukain sama pengusaha/warung? belutang banyak engga dibayar2',
+			'perang dahsyat apa yang bisa aku kasihin ke kamu? perangkat alat salat dibayar tunaii',
+			'kupu2 apa yang membanggakan banget? kupunya pacar seperti kamu',
+			'tau engga apa bedanya kamu dengan lukisan? kalau lukisan tambah lama tambah antik, kalau kamu tambah lama tambah cantik',
+			'nembak ke lantai, tapi yang kena hidung? kentut woi',
+			'dua hewan apa yang hanya terdiri dari satu huruf? i kan, g ajah',
+			'nama penyakit populer dari china? kung flu',
+			'hewan paling aneh sedunia? belalang kupu2 karena siang makan nasi, malam minum susu',
+			'kota apa yang nilainya tujuh? salah tiga',
+			'apa bedanya matahari dan bulan? matahari sering ada diskon, bulan enggak',
+			'micin apa yang rasanya manis? micintaimu',
+			'kotak apa yang paling menyakitkan? kotak sadar selama ini aku sayang kamu',
+			'apa yang bikin mobil bmw mahal? huruf w, kalau diganti x jadinhya bmx',
+			'kopi apa yang bikin lelah? kopi necapek',
+			
+
+
+
+
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

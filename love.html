@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Hubungan Asmara"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Kamu sayang aku nggak? Dibanding bulan lalu, naik, turun, apa tetap?',
+			'Kamu bahagia nggak di hubungan ini? Dibanding bulan lalu, naik, turun, apa tetap?',
+			'Kamu bangga nggak sama aku? Dibanding bulan lalu, naik, turun, apa tetap?',
+			'Dimana dan kapan akan menikah?',
+			'Apakah perlu perjanjian pranikah?',
+			'Berapa maksimal biaya menikah yang akan atau mau dikeluarkan?',
+			'Konsep wedding seperti apa yang diinginkan?',
+			'Pernikahan terbatas atau tetap seperti biasa?',
+			'Apa yang menjadi indikator/pertimbangan bahwa suatu kencan disebut kencan yang berhasil?',
+			'Apa tiga aturan utama Anda agar kencan itu menjadi kencan berhasil?',
+			'Siapa yang akan bayar pernikahan?',
+			'Apakah ortu perlu dilibatkan untuk persiapan pernikahan?',
+			'Akan tinggal di mana setelah menikah? Mertua? Ortu? Kontrak?',
+			'Apakah istri boleh atau harus tetap bekerja?',
+			'Apakah suami ada niat poligami?',
+			'Bagaimana pandangan masing-masing tentang perceraian?',
+			'Apakah tetap ada privacy seperti tidak boleh liat HP pasangan?',
+			'Apakah akan ada ART atau rumah urus bersama, atau hanya istri?',
+			'Apakah merayakan ultah, anniversary, dll?',
+			'Mau menunda punya anak atau langsung digeber?',
+			'Bagaimana jika tidak bisa punya anak? Suami boleh kawin lagi?',
+			'Mau dokter kandungan perempuan atau laki-laki?',
+			'Normal atau Caesar?',
+			'Apakah suami antar istri kontrol?',
+			'Rumah sakit seperti apa yang dipilih?',
+			'Apakah mau menabung untuk IVF atau bayi tabung?',
+			'Mau berapa anak dan berapa tahun jaraknya?',
+			'Anak divaksin atau tidak?',
+			'Apakah akan pakai KB?',
+			'Siapa yang jaga anak jika ortu kerja? Mertua? ART? Daycare?',
+			'Apakah suami mau ikut urus anak? Ganti popok, suapin, dll',
+			'Pola parenting seperti apa yang akan diadopsi nantinya?',
+			'Apakah akan memprioritaskan sekolah yang berkualitas?',
+			'Menabung di bank, ok atau tidak sesuai keyakinan?',
+			'Untuk beli rumah atau mobil, KPR atau cash dengan plus minusnya?',
+			'Apakah Anda bangun sendiri, karena alarm, musik, atau ada orang lain yang membangunkan Anda?',
+			'Bagaimana pengaturan uang keluarga? Suami/istri yang atur?',
+			'Apakah penghasilan istri untuk bantu keluarga juga?',
+			'Apakah akan investasi? Di reksadana, LM, atau apa?',
+			'Jelaskan rumah impian Anda kepada saya.',
+			'Apakah akan ada asuransi selain dari kantor? Asuransi apa saja?',
+			'Apakah suami/istri boleh punya me time masing-masing?',
+			'Apakah penting traveling dengan keluarga?',
+			'Apakah Anda lebih suka menerima uang atau hadiah nyata?',
+			'Apakah boleh teman-teman bermain ke rumah?',
+			'Apakah Anda berantakan atau terorganisir?',
+			'Apakah Anda seorang yang lama atau cepat tidur?',
+			'Bagaimana opini tentang keluarga masing-masing?',
+			'Apakah boleh nongkrong setelah jam kantor dengan teman?',
+			'Apakah ok jika pasangan mau kursus, gym, kuliah lagi?',
+			'Apakah boleh traveling tanpa pasangan atau keluarga?',
+			'Bagaimana pandangan pasangan terhadap sex?',
+			'Berapa derajat AC yang biasa dipasang? :))',
+			'Apa hadiah yang menurut anda ideal yang ingin Anda terima?',
+			'Apa liburan favoritmu?',
+			'Apa kenangan terlucumu tentang kami?',
+			'Apa tradisi keluarga favorit Anda saat tumbuh dewasa?',
+			'Apa kesan pertama Anda tentang saya?',
+			'Siapa crush pertamamu? Apa yang membuat Anda tertarik padanya?',
+			'Apa yang kamu ingat tentang kencan pertama kita?',
+			'Apa kenangan ulang tahun terbaikmu?',
+			'Apa yang paling membuatmu takut tentang masa depan?',
+			'Menurut Anda seperti apa hidup Anda 10 tahun mendatang?',
+			'Apa yang ingin Anda lakukan saat pensiun?',
+			'Jika Anda tahu bahwa Anda hanya punya waktu seminggu untuk hidup, apa yang akan Anda lakukan?',
+			'Jika Anda dapat memilih untuk tinggal di satu usia selama sisa hidup Anda, usia berapa yang akan Anda pilih?',
+			'Menurut Anda apa kekuatan terbesar saya?',
+			'Menurut Anda apa kelemahan terbesar saya?',
+			'Apa hal yang saya lakukan yang mengganggu Anda?',
+			'Kamu suka menghabiskan uangmu untuk apa?',
+			'Apakah Anda lebih suka bersantai di waktu luang Anda atau melakukan sesuatu yang aktif?',
+			'Apa sesuatu yang saya lakukan yang Anda sukai?',
+			'Kapan kamu merasa paling dicintai olehku?',
+			'Apakah Anda lebih suka memakai pakaian yang modis atau pakaian yang nyaman?',
+			'Apakah Anda lebih suka memiliki banyak teman atau hanya beberapa yang dekat?',
+			'Apakah Anda memiliki keluarga besar? Dan nyaman dengan keluarga tersebut?',
+			'Apa hal pertama yang Anda perhatikan dari lawan jenis?',
+			'Apa yang membuat Anda menjatuhkan pilihan kepada Saya ?',
+			'Masih dapatkah Saya bermain dengan teman-teman setelah menikah ?',
+			'Bagaimana sikap Anda Ketika marah tak terkendali apabila Saya melakukan kesalahan ?',
+			'Apa kebiasaan yang sering Anda lakukan Ketika waktu kosong ?',
+			'Apa kekurangan dan kelebihan Anda ?',
+			'Apa plan hidup Anda dalam jangka 1 tahun ke depan, 5 tahun ke depan dan 10 tahun ke depan?',
+			'Apa makanan yang paling Anda sukai dan paling Anda tidak sukai?',
+			'Seberapa religius anda?',
+			'Apa yang sudah Anda capai dalam hidup Anda?',
+			'Apakah Anda masih membiayai keluarga Anda ?',
+			'Keluarga seperti apa yang Anda ingin bangun Bersama Saya ?',
+			'Dalam membangun rumah tangga, pasti akan banyak ketidakcocokan atau cekcok. Bagaimana Anda menyikapi hal tersebut ?',
+			'Apakah Anda pernah dirawat, operasi atau sakit dalam jangka waktu lama ?',
+			'Apa penyakit yang paling rutin menjangkit Anda?',
+			'Pola asuh seperti apa yang ingin Anda terapkan ?',
+			'Bila suatu hari, bisnis yang dikelola tidak dapat diselamatkan. Apa yang akan Anda lakukan ?',
+			'Sejauh apa Anda menyisihkan dana untuk dana darurat dan tabungan?',
+			'Dalam pelaksanaan dan penerapan keuangan berumah tangga, pengelolaan keuangan akan dikelola oleh siapakah?',
+			'Hal apa yang paling kamu cari dalam pasangan kamu?',
+			' Menurut kamu hal apa yang bisa menghancurkan hubungan dan tidak akan bisa kamu maafkan?',
+			'Menurut kamu 3 hal penting apa yang membuat hubungan berjalan baik?',
+			'Menurut kamu apa orang bisa atau harus berteman baik dengan mantan pacar?',
+			'Apa 3 hal kesamaan antara kamu dan aku?',
+			'Apa perbedaan terbesar antara kamu dan aku?',
+			'Hal apa yang tidak akan bisa kamu diskusikan dengan aku?',
+			'Menurut kamu, definisi selingkuh itu yang seperti apa?',
+			'Masih ingat hal paling romantis yang pernah aku lakukan untuk kamu?',
+			'kamu paling ilfil ketika aku sedang melakukan apa?',
+			'punya pertanyaan yang ingin aku jawab sejujur-jujurnya?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

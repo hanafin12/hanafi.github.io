@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Jika Anda Bisa"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Menjadikan pikiran Anda sebuah tempat, seperti apa itu?',
+			'Punya maskot pribadi, apa itu? Belum tentu hewan',
+			'Mintalah semua orang di dunia tiba-tiba berhenti bergerak—kecuali Anda. Apa yang akan kamu lakukan?',
+			'Menghentikan waktu sekali dalam 30 detik, saat kondisi apa anda akan menggunakannya?',
+			'ACiptakan rasa es krim, apakah itu?',
+			'Jika Anda dapat menelepon siapa pun di dunia, dan berbicara selama satu jam, siapa yang akan Anda telepon?',
+			'Hidupkan kembali satu hari tertentu dalam hidup Anda kapan pun Anda mau, hari apa itu?',
+			'Menemukan remote yang mengontrol waktu, bagaimana Anda menggunakannya? Itu menghentikan waktu, memundurkan, maju cepat, semuanya. Tapi hanya bisa dipakai satu kali.',
+			'Memiliki dunia satu jenis klon, orang apa yang akan Anda pilih untuk menjadi donor untuk klon?',
+			'Jika Anda tahu Anda tidak bisa gagal, apa yang akan Anda lakukan?',
+			'Jika Anda bisa kembali ke masa lalu dan mengubah satu hal, apakah itu?',
+			'Jika Anda bisa menciptakan hari libur, apakah itu?',
+			'Jika ada jam tambahan setiap hari, apa yang akan Anda lakukan dengannya?',
+			'Jika Anda harus melepaskan salah satu dari panca indera Anda, yang manakah itu dan mengapa?',
+			'Apa yang akan Anda lakukan jika Anda memenangkan lotre?',
+			'Jika Anda menjadi presiden, apa hal pertama yang akan Anda lakukan?',
+			'Apa yang akan Anda lakukan jika Anda tidak bisa menggunakan internet atau menonton TV selama sebulan?',
+			'Jika Anda dapat mencoba pekerjaan apa pun selama satu minggu, pekerjaan apa yang akan Anda pilih untuk dicoba?',
+			'Jika Anda adalah lawan jenis untuk satu hari, apa yang akan Anda lakukan?',
+			'Jika Anda bisa menghilangkan satu hal yang Anda lakukan setiap hari, apakah itu?',
+			'Jika Anda dapat menghabiskan satu jam dengan orang yang masih hidup, siapa orang itu dan apa yang akan Anda pilih untuk dilakukan?',
+			'Bagaimana jika Anda dapat mengabaikan satu item rutinitas kebersihan pribadi, apakah itu?',
+			'Jika Anda dapat mempelajari keterampilan apa pun, keterampilan apa itu?',
+			'Bagaimana jika semua manusia kehilangan kemampuan untuk berpikir sendiri?',
+			'Bagaimana jika Anda hanya bisa hidup selama satu tahun, apa yang akan Anda lakukan?',
+			'Bagaimana jika Anda memiliki hubungan romantis yang indah tetapi itu jarak jauh, apa yang akan Anda lakukan?',
+			'Bagaimana jika Anda dapat melakukan perjalanan ke seluruh dunia selama sisa hidup Anda, apa yang akan Anda lakukan?',
+			'Bagaimana jika semua orang di dunia tiba-tiba mati, harap Anda. Bagaimana Anda bisa bertahan?',
+			'Bagaimana jika Anda hanya bisa melihat anggota keluarga Anda secara virtual, bagaimana Anda akan menjaga hubungan baik?',
+			'Bagaimana jika Anda memiliki tiga permintaan, tetapi mereka harus dikabulkan untuk orang lain. Apa yang Anda inginkan?',
+			'Bagaimana jika Anda memiliki satu kekuatan supernatural, tetapi itu harus konyol. Apa yang akan terjadi?',
+			'Bagaimana jika Anda bisa mengubah satu hal tentang hidup? Dalam hidup Anda, apa yang akan Anda ubah?',
+			'Bagaimana jika Anda bisa melihat seseorang sepanjang waktu? Siapa orang yang paling ingin kamu temui?',
+			'Bagaimana jika Anda hanya bisa k#ss satu orang selama sisa hidup Anda? Siapa itu dan mengapa?',
+			'Bagaimana jika Anda bisa mengubah satu hal tentang dunia? Apa yang akan Anda ubah?',
+			'Bagaimana jika Anda bisa membunuh satu orang dari sejarah, siapa itu dan mengapa?',
+			'Bagaimana jika Anda bisa melihat ke masa depan, apa yang ingin Anda lihat?',
+			'Bagaimana jika Anda hanya bisa melihat satu warna? Apa warna itu dan mengapa?',
+			'Bagaimana jika uang bukan masalah? Apa yang akan Anda beli?',
+			'Bagaimana jika Anda bisa memiliki satu kekuatan super?',
+			'Bagaimana jika Anda memiliki satu permintaan, keinginan apa yang akan Anda buat?',
+			'Bagaimana jika kemampuan supernatural Anda adalah kemampuan untuk tidak terlihat? Apa yang akan Anda lihat dan mengapa?',
+			'Bagaimana jika Anda bisa membangun rumah yang Anda inginkan, bagaimana Anda akan membangunnya?',
+			'Bagaimana jika Anda bisa berbicara dengan hewan, apa yang akan Anda katakan kepada mereka?',
+			'Bagaimana jika Anda bisa menjadi terkenal selama sisa hidup Anda tetapi miskin selamanya, apakah Anda akan melakukannya?',
+			'Bagaimana jika Anda bisa menjadi binatang selama sehari, Anda ingin menjadi binatang apa?',
+			'Bagaimana jika Anda bisa mengubah bulan atau tahun kelahiran Anda?',
+			'Bagaimana jika Anda bisa menjadi tubuh yang terkenal selama sehari? Siapa yang akan Anda pilih?',
+			'Bagaimana jika Anda bisa membawa seseorang kembali dari kematian? Siapa yang akan Anda bangkitkan?',
+			'Bagaimana jika Anda bisa melihat masa depan Anda, apakah Anda ingin melihatnya?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

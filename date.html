@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Kencan Pertama"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apakah saat ini Anda bersenang-senang?',
+			'Mengapa kamu datang untuk meluangkan waktu bertemu denganku?',
+			'Apakah merepotkan bagi Anda untuk bertemu denganku?',
+			'Saya suka kemeja/jaket/baju/sepatu itu. Di mana Anda mendapatkannya?',
+			'Apakah Anda mengenal banyak orang di sini?',
+			'Apa yang sedang kamu baca sekarang?',
+			'Series/komik/webtoon apa yang sedang kamu tonton sekarang?',
+			'Melakukan sesuatu yang menyenangkan akhir pekan ini?',
+			'Apakah Anda memiliki hewan peliharaan?',
+			'Apa satu hal menarik tentang diri Anda yang tidak diketahui oleh siapa pun?',
+			'Apa yang Anda lakukan untuk mencari nafkah?',
+			'Jika kamu bisa pindah kemana saja, kemana kamu akan pergi?',
+			' Apa film terakhir yang kamu tonton?',
+			'Apa yang biasanya Anda lakukan untuk bersenang-senang?',
+			'Hobi apa yang Anda harap Anda punya lebih banyak waktu?',
+			'Jika Anda tidak di sini, apa yang akan Anda lakukan?',
+			'Apa liburan favorit Anda?',
+			'Apakah Anda memiliki nama panggilan?',
+			'Apa kekesalan hewan peliharaan terbesar Anda?',
+			'Ceritakan tiga fakta menyenangkan tentang diri Anda.',
+			'Apa hal terbaik yang Anda miliki sejauh ini?',
+			'Apakah Anda pernah ke sini sebelumnya?',
+			'Apa hal terbaik tentang pekerjaan Anda?',
+			'Apa arti dari namamu?',
+			'Di mana Anda dibesarkan?',
+			'Apakah Anda suka memasak?',
+			'Hobi apa yang Anda harap bisa Anda kuasai?',
+			'Lagu apa yang terngiang di kepala Anda minggu ini?',
+			'Apakah Anda seorang suka menggunakan uang atau penabung?',
+			'Kalau kamu bisa traveling ke manapun kamu mau, ke mana kamu akan pergi sekarang?',
+			'Apa hal unik yang kamu punya atau biasa kamu lakukan?',
+			'Apa pekerjaan impuanmu',
+			'Kalau kamu tidak harus bekerja untuk mencari uang, apa yang akan kamu lakukan?',
+			'Apa yang kamu suka dari kota ini?',
+			'Siapa orang-orang yang menginspirasi dirimu?',
+			'Apakah kamu masih sering bertemu atau menghubungi sahabatmu waktu di sekolah dulu?',
+			'Apa hal paling spontan yang pernah kamu lakukan?',
+			'Apakah kamu bisa memberitahu sedikit soal keluargamu?',
+			'Cerita, dong, soal teman-teman terdekatmu!',
+			'Seperti apa kamu ketika masih kecil?',
+			'Adakah hal yang benar-benar kamu inginkan saat ini?',
+			'Apa kalimat romantis ter-cheesy yang pernah kamu dengar?',
+			'Bagaimana hubungan yang ideal menurut kamu?',
+			'Apakah ada orang yang berpikir bahwa kita berpacaran?',
+			'Kualitas apa saja yang kamu cari dari pasangan?',
+			'Buatmu, kencan yang sempurna itu yang seperti apa?',
+			'Bagaimana hubunganmu dengan kedua orang tua?',
+			'Kalau liburan, kamu pakai rencana atau go with the flow?',
+			'Topik apa yang bisa bikin kamu ngomong seharian?',
+			'kejadian lucu/memalukan apa yang kamu pernah alami akhir2 ini?',
+			'Apa yang biasa kamu lakukan saat waktu luang?',
+			'kalau menang lotere 1 miliar, kamu mau ngapain?',
+			'ada engga, sesuatu yang kamu impikan sejak lama, tapi belum terlaksana? kenapa?',
+			'Apakah Anda pernah ke sini sebelumnya?',
+			'Apa satu hal yang selalu membuatmu tertawa?',
+			'Apa hal terpenting yang harus saya ketahui tentang Anda?',
+			'Apa kencan terburuk yang pernah Anda alami?',
+			'Bagaimana Anda menjadi dekat dengan sahabat Anda?',
+			'Apa film favoritmu yang bisa kamu tonton berulang kali?',
+			'Apa pekerjaan impian Anda selama ini?',
+			'Jika Anda bisa berkencan dengan satu selebriti, siapa itu?',
+			'Apakah Anda seorang pemboros atau penabung?',
+			'Apa yang paling Anda sukai dari pekerjaan Anda?',
+			'Menurut Anda, apa keanehan Anda yang paling menyebalkan?',
+			'Apa pesan teks teraneh yang pernah kamu terima?',
+			'Apa yang paling kamu benci dari pacaran?',
+			'Di mana tempat favoritmu di dunia?',
+			' Apa liburan terbaik yang pernah Anda jalani?',
+			'Seberapa dekat Anda dengan keluarga Anda?',
+			'Apakah Anda lebih suka tinggal di dalam atau keluar daerah kelahiran?',
+			'Di mana Anda pergi ke sekolah?',
+			'Pernahkah Anda tinggal di tempat lain?',
+			'Apa keahlianmu yang benar-benar kamu banggakan?',
+			'Apa bakat rahasiamu?',
+			'Apa kebiasaan yang paling menyebalkan menurutmu?',
+			'Ceritakan tentang satu hal di bucket list Anda.',
+			'Apa yang paling tidak Anda sukai dari pekerjaan Anda?',
+			'Apa yang paling Anda sukai dari pekerjaan itu?',
+			'Apakah Anda lebih suka menelepon atau mengirim SMS?',
+			'Apa pendapat jujur Anda tentang media sosial?',
+			'Apa yang Anda cari dalam suatu hubungan?',
+			'Apakah Anda mendengar tentang (berita besar)?',
+			'Apa satu hal yang membuatmu tertawa minggu ini?',
+			'Apa makanan favoritmu?',
+			'Apa hal terburuk yang pernah kamu makan?',
+			'Film apa yang sangat ingin kamu tonton?',
+			'Bagaimana Anda menghabiskan waktu luang Anda?',
+			'Apakah Anda seorang morning person atau night owl?',
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

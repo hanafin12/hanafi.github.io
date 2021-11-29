@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Hiburan/Hobi"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apa Hobi Anda? Kenapa?',
+			'Jika Anda harus mendengarkan satu genre musik sepanjang hari, genre apa yang akan Anda pilih?',
+			'Jika Anda dapat memainkan alat musik apa pun yang Anda tidak tahu cara memainkannya sekarang, alat musik apa yang akan Anda pilih?',
+			'Apakah kamu bisa memainkan alat musik?',
+			'Apakah Anda suka bernyanyi bersama musik yang Anda dengarkan—dan apakah Anda mencapai nada yang tepat atau tidak?',
+			'Apakah Anda pernah melakukan karaoke? Apa yang kamu nyanyikan?',
+			'Musik apa yang menjadi yang dianggap sangat menyenangkan oleh anda, namun menimbulkan perasaan bersalah saat menikmatinya?',
+			'Apa olahraga favorit anda?',
+			'Apakah Anda bermain olahraga hari ini? Jika tidak, bagaimana Anda berolahraga?',
+			'Olahraga apa yang Anda suka tonton di TV? Berapa banyak waktu yang Anda habiskan untuk menonton mereka?',
+			'Pernahkah Anda menonton olahraga apa pun secara langsung di lapangan atau stadion olahraga? Bagaimana pengalamannya? Apakah lebih baik daripada menonton di TV?',
+			'Apakah ada olahraga yang tidak bisa Anda tonton di TV? Apa mereka dan mengapa Anda tidak menyukainya?',
+			'Olahraga apa yang paling berbahaya? Cedera seperti apa yang terjadi saat orang memainkannya?',
+			'Apa musim yang paling anda sukai, kenapa?',
+			'Negara Anda terbaik dalam olahraga apa? Mengapa kuat dalam hal ini?',
+			'Olahraga apa yang Anda mainkan saat kecil? Apa momen paling membanggakan Anda?',
+			'Siapa olahragawan favorit Anda sepanjang masa?',
+			'Apakah Anda suka memakai pakaian dengan lambang tim atau nama pemain?',
+			'Apa pendapat Anda tentang penggemar olahraga yang melukis wajah mereka atau mengenakan kostum?',
+			'Jika Olimpiade hanya bisa menjadi satu acara, apa yang seharusnya menjadi acara itu?',
+			'Orang-orang bersaing dalam olahraga, permainan, ekonomi, dan banyak bidang kehidupan lainnya. Apa yang baik dan buruk tentang persaingan?',
+			'Apakah terlalu banyak uang untuk olahraga? Apakah atlet dibayar terlalu banyak atau terlalu sedikit?',
+			'Jika Anda dapat ahli dalam olahraga apa pun, olahraga apa itu?',
+			'Beberapa menyarankan bahwa orang yang pandai olahraga, tidak cerdas. Apa pendapat Anda tentang stereotip ini?',
+			'Menurut kamu, kamu paling jago di olahraga apa?',
+			'Seberapa sering kamu berolahraga?',
+			'olahrga yang paling mahal?',
+			'Olahraga yang ingin kamu coba dan kuasai?',
+			'bisakah kamu berenang?',
+			'Apakah Anda pernah melihat stasiun luar angkasa di langit malam?',
+			'Apa keahlian/bakat terbaik Anda?',
+			'Bagaimana menurut Anda—apakah UFO itu nyata?',
+			'Apakah Anda percaya ada alien?',
+			'Apakah Anda pikir alien sudah berkunjung ke sini?',
+			'Apakah Anda pikir akan ada perjalanan ke Mars dalam hidup kita?',
+			'Apakah Anda pikir ada kehidupan di planet lain?',
+			'Apakah Anda pikir kita bisa mencapai ujung alam semesta jika kita terbang cukup jauh?',
+			'Apa buku terbaik yang pernah kamu baca?',
+			'Buku apa yang membuatmu terkejut?',
+			'Buku apa yang telah Anda baca yang membuat perbedaan dalam hidup Anda?',
+			'Apa acara paling lucu yang pernah kamu lihat di tv?',
+			'Apa tiga acara yang Anda tonton saat kecil?',
+			'Siapa tokoh kartun favoritmu?',
+			'Apa serial terbaik yang pernah ada di tv, menurut Anda?',
+			'Jika punya kekuasaan dalam mengubah, bagaimana Anda akan mengubah tv sekarang?',
+			'Apa acara tv terbaik saat ini?',
+			'Jenis film apa yang Anda suka tonton?',
+			'Apakah Anda lebih suka menonton atau berolahraga?',
+			'Apa yang Anda gunakan untuk mendengarkan musik?',
+			'Film apa yang sangat Anda sukai, dan mengapa?',
+			'Adegan apa dalam film yang tidak pernah Anda lupakan dan mengapa?',
+			'Film apa yang menurut Anda terlalu di nilai berlebihan tapi ternyata biasa saja?',
+			'jika dapat memilih, akan memilih buku atau film?',
+			'apakah kamu suka film dokumenter?',
+			'film terburuk yang pernah kamu tonton',
+			'suka film horror? kenapa? kenapa tidak?',
+			'kapan terakhir ke bioskop? nonton apa? dengan siapa?',
+			'film terakhir yang di tonton? dan bagaimana pendapat anda tentang film tersebut?',
+			'apakah film mempunyai kekuatan seperti buku yang dapat mengubah dunia?',
+			'lebih memilih menonton film di bioskop atau di tempat tinggal sendiri yang nyaman?',
+			'buku terakhir yang anda baca? tentang apa? bagaimana pendapat anda?',
+			'buku tertebal yang pernah kamu baca? berapa halaman? buku apa?',
+			'buku yang terlama anda baca dan selesaikan?',
+			'genre/jenis buku favorit?',
+			'seberapa cepat kamu dalam membaca?',
+			'seberapa sering kamu pergi ke perpus?',
+			'Apa buku yang sangat mempengaruhi kamu',
+			'suka buku fiksi atau nonfiksi?',
+			'buku apa yang mengubah opini mu yang telah kamu pegang dalam jangka waktu lama?',
+			'lagu terakhir yang kamu sering ulang2/dengar?',
+			'lagu favorit soundtrack film?',
+			'suka musik klasik?',
+			'Apa permainan pesta/papan(gameboard) favorit Anda?',
+			'lagu yang membuat mood kamu menjadi lebih baik?',
+			'adakah lagu yang membuat kamu menangis?',
+			'mana yang kamu pilih? popular music atau music yang tidak terkenal?',
+			'suka pergi ke konser? kenapa? kenapa tidak? konser terakhir?',
+			'band atau penyanyi pertama yang kamu idolakan? apakah masih mengidolakan?',
+			'olahraga yang menurumu paling menarik dan paling membosankan untuk ditonton.',
+			'Apa yang kamu suka lakukan untuk bersenang-senang?',
+			'Apa yang kamu lakukan di waktu luang?',
+			'Apa yang kamu senangi saat ini?',
+			'Apa yang menjadi perhatian utama Anda saat ini?',
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

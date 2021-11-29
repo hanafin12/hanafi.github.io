@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Makanan&Minuman"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Apakah kamu suka coklat?',
+			'Jika Anda ditawari secangkir kopi dan secangkir teh, mana yang akan Anda ambil?',
+			'Apakah Anda suka makan di luar? Dimana tempat favoritmu?',
+			'Pernahkah Anda mencoba makan vegan?',
+			'Apakah Anda pernah mencoba diet ketat?',
+			'Apa makanan favorit Anda?',
+			'Apa minuman favorit Anda?',
+			'Jika Anda ingin camilan, cemilan apa kesukaan anda?',
+			'Makanan apa yang terlalu enak untuk diucapkan, tetapi benar-benar repot untuk mencoba memakannya?',
+			'Apakah Anda suka kerupuk Cheesy dengan keju, atau Anda lebih suka kerupuk biasa dengan keju?',
+			'Saat Anda memasak, apakah Anda mengukur semuanya, atau hanya sejumput di sini, dan sedikit di sana?',
+			'Apa makanan favoritmu yang paling enak dimakan setiap saat ?',
+			'Lebih suka makan di rumah atau makan di luar?',
+			'Cemilan atau jajanan apa yang paling kamu suka?',
+			'Apa makanan penutup favoritmu?',
+			'Lebih suka snack manis atau asin?',
+			'Jika seseorang yang Anda coba untuk membuat ia terkesan datang ke rumah Anda untuk makan malam, apa yang akan Anda buat untuk mereka?',
+			'Apa pengalaman restoran terburuk Anda?',
+			'Apa minuman non-alkohol favorit Anda?',
+			'Seberapa penting dekorasi restoran bagi Anda?',
+			'Apa masakan atau jenis makanan favorit Anda?',
+			'Makanan apa yang benar-benar kamu benci?',
+			'Apa pendapat Anda tentang prasmanan?',
+			'Kapan terakhir kali Anda bertengkar soal makanan?',
+			'Makanan apa yang terlihat menjijikan tapi rasanya sangat enak?',
+			'Apa yang Anda dapatkan setiap kali Anda pergi berbelanja?',
+			'Jika hidup Anda adalah makan, makanan seperti apakah itu?',
+			'Apa yang Anda inginkan untuk menjadi makanan terakhir Anda jika Anda berada di hukuman mati?',
+			'Makanan apa yang Anda tahu tidak boleh Anda makan tetapi Anda tidak bisa tahan untuk memakannya?',
+			'Apakah Anda suka makanan pedas? Mengapa atau mengapa tidak? Apa hal terpedas yang pernah kamu makan?',
+			'Apakah pemerintah memiliki tempat dalam mengatur makanan? Sejauh mana pemerintah harus mengatur makanan?',
+			'Ketika orang membuat kesalahan tentang makanan (terutama makanan asing), apakah Anda merasa perlu untuk memperbaikinya? (yaitu sushi / sashimi atau stromboli / calzone)',
+			'Apa Jajanan favorit Anda ?',
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>

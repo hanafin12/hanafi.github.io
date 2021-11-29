@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Anak Kecil"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Di mana sekolah anda?',
+			'Apa mata pelajaran/kelas favoritmu?',
+			'Siapa guru favoritmu?',
+			'Mengapa orang itu guru favoritmu?',
+			'Mata pelajaran apa yang Anda harap tidak pernah Anda ambil?',
+			'Apa aksesoris favoritmu untuk dipakai ke sekolah?',
+			'Apakah Anda percaya pada alien?',
+			'Jika Anda bisa menjadi binatang apa saja, binatang apakah itu?',
+			'Apa yang Anda inginkan ketika Anda dewasa?',
+			'Apakah Anda memiliki saudara laki-laki atau perempuan?',
+			'Apa yang paling kamu sukai dari ibu dan ayahmu?',
+			'Di mana Anda ingin berada saat ini?',
+			'Apa lagu favoritmu?',
+			'Siapa tokoh kartun favoritmu?',
+			'Apakah Anda memiliki karakter Disney favorit?',
+			'Lebih suka tinggal di kota atau di desa? Mengapa?',
+			'Jika Anda dapat mengubah satu hal tentang sekolah, apakah itu?',
+			'Apakah kamu suka berenang?',
+			'Apa game favorit Anda untuk dimainkan?',
+			'Makanan apa yang kamu benci?',
+			'Apa tempat favorit Anda?',
+			'Apa warna favoritmu?',
+			'Makanan apa yang paling kamu suka?',
+			'Apa mainan favorit Anda untuk dimainkan?',
+			'Apa yang akan kamu lakukan besok?',
+			'Apa yang kamu takutkan?',
+			'Jika boneka Anda bisa berbicara, apa yang akan anda katakan?',
+			'Suara apa yang kamu suka?',
+			'hadiah apa yang kamu inginkan?',
+			'apa kegiatan yang ingi kamu lakukan bersama keluarga mu di hari libur?',
+			'jika punya hewan peliharaan, nama apa yang anda akan berikan?',
+			'kalau kamu diizinkan melakukan apa saja sekarang, kamu pilih ngapain??',
+			'kalau lagi di pantai, kamu bakalan ngelakuin apa?',
+			'bagaimana perasaanmu saat dipeluk?',
+			'Apa yang bikin kamu senang?',
+			'Gimana kabar teman kamu?',
+			'Kamu suka melamun apa, Nak?',
+			'Apa yang kamu harapkan saat bangun tidur?',
+			'Kalau kamu membuka toko, apa yang akan kamu jual?',
+			'Apa yang membuat kamu merasa berani?',
+			'Apa yang membuat kamu merasa dicintai?',
+			'Apa yang membuat kamu merasa dicintai?',
+			'Apa yang kamu suka berikan pada orang lain?',
+			'Apa kamu hari ini banyak tertawa bahagia di sekolah? Kenapa?',
+			'Misalnya kamu jadi koki, coba ceritakan ke Mama, seperti apa restoran kamu? Makanan apa yang akan kamu jual?',
+			'Kalau kamu membuat sebuah gua di hutan, apa yang ada di dalamnya?',
+			'Apa saja hal terbaik dari alam ini menurut kamu?',
+			'Jika kamu jadi fotografer, kamu akan memotret apa?',
+			'Apa memori yang membuat kamu senang?',
+			'Apa yang menganggu kamu?',
+			'Apa yang akan membuat kamu jadi orang hebat?',
+			'Menurutmu, teman sekelas kamu yang pintar itu karena apa?',
+			'kalau kamu nulis buku, kamu mau nulis apa?'
+
+
+
+			
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>
