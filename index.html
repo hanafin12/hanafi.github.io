@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="judul">Pertanyaan Acak untuk Memulai Percakapan</h1>
+		<ul>
+			<li><a href="random.html">Acak</a></li>
+			<li><a href="pribadi.html">Pribadi</a></li>
+			<li><a href="Teknologi.html">Teknologi</a></li>
+			<li><a href="food.html">Makanan&Minuman</a></li>
+			<li><a href="nature.html">Alam&Perjalanan</a></li>
+			<li><a href="kerja.html">Kerja&Networking</a></li>
+			<li><a href="hobi.html">Hiburan/Hobi</a></li>
+			<li><a href="if.html">Jika Anda</a></li>
+			<li><a href="investasi.html">Investasi</a></li>
+			<li><a href="date.html">Kencan Pertama</a></li>
+			<li><a href="love.html">Hubungan Asmara</a></li>
+			<li><a href="pernah.html">Pernahkah?</a></li>
+			<li><a href="kid.html">Anak Kecil</a></li>
+			<li><a href="teman.html">Teman</a></li>
+			<li><a href="lucu.html">Lucu</a></li>
+			<li><a href="todt.html">TOD(T)</a></li>
+			<li><a href="todd.html">TOD(D)</a></li>
+			<li><a href="deep.html">Deep Talk</a></li>
+			<li><a href="any.html">Any Situation</a></li>
+			<li><a href="kutipan.html">Kutipan</a></li>
+			<li><a href="quotes.html">Quotes</a></li>
+			<li><a href="gombal.html">Gombal</a></li>
+			<li><a href="tebak.html">Tebak2-an</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="main">
+		<button id="btn" onclick="generate();">Tekan untuk pertanyaan baru</button>
+		<div id="output">Tekan tombol untuk mendapatkan pertanyaan tentang "Acak"</div>
+	</div>
+	<!-- <script src="main.js" ></script> -->
+	<script>
+		function generate(){
+			let btn = document.getElementById('btn');
+			let output = document.getElementById('output');
+			let quotes = [
+			'Seseorang datang kembali dari masa depan dan setuju untuk menjawab hanya satu pertanyaan tentang apa yang akan terjadi dalam hidup Anda. Apa yang akan Anda tanyakan?',
+			'Apa mode atau tren yang menurut Anda konyol? Tren apa yang Anda ikuti, meskipun itu konyol?',
+			'Bau apa yang mengembalikan kenangan indah? (Masakan makanan tertentu? Lotion bayi? Sampo atau parfum?)',
+			'Sebutkan satu hal yang sangat Anda kuasai?',
+			'Apa bakat aneh atau tidak terlalu berguna yang Anda miliki? (Apakah itu bisa bernyanyi dengan falsetto tinggi, menggoyangkan telinga Anda, melakukan tanda Vulcan dengan kedua tangan, atau bersendawa alfabet, tampaknya hampir semua orang memiliki bakat aneh.)',
+			'Jika Anda dapat menelepon siapa pun di dunia, dan berbicara selama satu jam, siapa yang akan Anda telepon?',
+			'Ada informasi yang kami gunakan setiap hari — di mana Anda mendapatkan informasi yang paling sering Anda gunakan?',
+			'Apa definisi sukses dalam hidup Anda?',
+			'Apa yang menjadi indikator/pertimbangan bahwa suatu kencan disebut kencan yang berhasil?',
+			'Apa tiga aturan utama Anda agar kencan itu menjadi kencan berhasil?',
+			'Apa kegiatan yang membuat anda akan melakukan sepenuh hati dan melakukan dengan sebaik mungkin',
+			'tipe orang seperti apa yang Anda pastikan akan bersikap baik kepadanya setiap kali Anda bertemu?',
+			'Apakah Anda lebih suka tinggal di mana ada empat musim yang berbeda, atau di tempat yang sama sepanjang tahun?',
+			'Apa musim yang paling anda sukai, kenapa?',
+			'Jika Anda ingin membuat hari libur, apakah itu? Apakah itu memiliki tradisi untuk melakukan sesuatu atau mewajibkan satu makanan untuk dimakan? Apakah itu akan memiliki nama?',
+			'Lebih suka tinggal di kota atau di desa? Mengapa?',
+			'Anda tinggal di tempat yang paling dingin sepanjang tahun. Apakah Anda lebih suka memiliki tungku atau perapian? Mengapa?',
+			'Anda akan menjalani operasi. Mereka akan membuat Anda tertidur. Saat Anda terlelap, Anda mendengar para dokter berbicara. Apa satu hal yang Anda TIDAK ingin mendengar mereka berkata saat Anda tertidur?',
+			'Dengan mengingat definisi ini, menurut Anda siapa orang paling sukses sepanjang masa? Menurut Anda siapa orang paling sukses yang pernah Anda kenal?',
+			'Apa penemuan terbaik menurut Anda?',
+			'Apa tempat favorit Anda?',
+			'Beri tahu saya saran terbaik Anda?',
+			'Jika Anda dapat mempelajari keterampilan apa pun, keterampilan apa itu?',
+			'Apa arti dari namamu?',
+			'Apakah Anda percaya pada keberuntungan atau apakah Anda percaya bahwa orang membuat keberuntungan mereka sendiri?',
+			'Jika uang bukan masalah, apa yang akan Anda lakukan dengan hidup Anda?',
+			'Apa hal yang belum pernah kamu lakukan tetapi ingin kamu coba lakukan?',
+			'Apa hal yang pernah kamu coba tapi tidak akan pernah kamu lakukan lagi?',
+			'Apakah Anda seorang suka menggunakan uang atau penabung?',
+			'Apakah Anda biasanya datang lebih awal, terlambat, atau tepat waktu?',
+			'Apa keahlian/bakat terbaik Anda?',
+			'Apa yang paling tidak Anda sukai tentang tinggal di kota / kota Anda?',
+			'Apa yang paling Anda sukai tentang tinggal di kota / kota Anda?',
+			'Apakah Anda biasanya melanggar aturan atau mengikutinya?',
+			'Apakah Anda seorang pemimpin atau pengikut?',
+			'Apakah Anda bangun sendiri, karena alarm, musik, atau ada orang lain yang membangunkan Anda?',
+			'Apakah Anda lebih dari orang yang spontan atau terstruktur?',
+			'Bagaimana teman dan keluarga Anda menggambarkan Anda?',
+			'Bagaimana tujuan Anda berubah seiring bertambahnya usia?',
+			'Jelaskan rumah impian Anda kepada saya.',
+			'Apa hal terbaik untuk dilakukan pada hari musim panas?',
+			'Apa hal terbaik untuk dilakukan pada hari musim hujan?',
+			'Apa bau favoritmu?',
+			'Apakah Anda lebih suka menerima uang atau hadiah nyata?',
+			'Apa hari favorit Anda dalam setahun?',
+			'Apakah Anda berantakan atau terorganisir?',
+			'Apakah Anda seorang yang lama atau cepat tidur?',
+			'Gambar apa yang suka membuat anda tersenyum?',
+			'Apakah Anda memakai sandal di rumah?',
+			'Apakah Anda ingat mimpi terakhir yang Anda alami?',
+			'Apa perubahan yang paling terasakan dari sejak Anda masih kecil dibandingkan sekarang?',
+			'Seperti apa rutinitas pagi Anda?',
+			'Seperti apa rutinitas malam Anda?',
+			'Apa hal pertama yang kamu pikirkan di pagi hari?',
+			'Apa hal terakhir yang kamu pikirkan sebelum tidur?',
+			'Apakah Anda memiliki nama panggilan saat masa kecil?',
+			'Apa cedera terburuk yang pernah Anda alami.',
+			'Pekerjaan apa yang pernah Anda kerjakan?',
+			'Kapan terakhir Anda begadang pada minggu ini? Apa yang ada lakukan',
+			'Kapan terakhir Anda bangun pada minggu ini? Apa yang ada lakukan',
+			'Apa bagian favorit dan paling tidak favorit Anda dalam seminggu?',
+			'Apa yang Anda pelajari dalam seminggu terakhir ini?',
+			'Menurut Anda seperti apa hidup Anda 10 tahun mendatang?',
+			'Apa yang ingin Anda lakukan saat pensiun?',
+			'Anda ingin hidup sampai usia berapa?',
+			'Setelah hari yang panjang, apakah Anda lebih suka bergaul dengan teman atau menghabiskan waktu sendirian?',
+			'Apa merek favorit Anda?',
+			'Apa yang ingin kamu lakukan untuk merayakan ulang tahunmu?',
+			'Apa hal favorit Anda untuk dilakukan saat hujan?',
+			'Kamu suka menghabiskan uangmu untuk apa?',
+			'Apakah Anda lebih suka bersantai di waktu luang Anda atau melakukan sesuatu yang aktif?',
+			'Apakah Anda mandi di pagi atau malam hari? Mengapa?',
+			'Apa permainan pesta/papan(gameboard) favorit Anda?',
+			'Apakah Anda lebih suka memakai pakaian yang modis atau pakaian yang nyaman?',
+			'Apakah Anda lebih suka memiliki banyak teman atau hanya beberapa yang dekat?',
+			'Apakah Anda memiliki keluarga besar? Dan nyaman dengan keluarga tersebut?',
+			'Apa hal pertama yang Anda perhatikan dari lawan jenis?',
+			'Apa yang kamu cari dari cewek/cowok?',
+			'Kualitas apa yang paling Anda hargai dari seorang teman?',
+			'Apa hal pertama yang Anda perhatikan ketika bertemu seseorang yang baru?',
+			'Apa yang Anda rencanakan di tahun ini untuk dicapai?',
+			'Ketika Anda berusia 95 tahun dan melihat kembali kehidupan Anda, apa hal yang telah anda lakukan dan yang ingin Anda katakan kepada semua orang',
+			'Apa tujuan utama hidupmu?',
+			'Bagaimana Anda akan menjelaskan bahwa rencana dan tujuan Anda telah berubah selama bertahun-tahun?',
+			'Kita masing-masing membuat tanda di dunia yang tidak seperti orang lain. Tanda seperti apa yang ingin Anda buat di dunia Anda?',
+			'Apa yang sudah Anda capai dalam hidup Anda?',
+			'Siapa yang memiliki pengaruh terbesar pada hal-hal yang telah Anda lakukan dalam hidup Anda?',
+			'Apakah Anda biasanya menyelesaikan apa yang Anda mulai?',
+			'Apakah Anda pernah memiliki sesuatu yang dimulai dengan buruk dan berakhir dengan baik?',
+			'Apa yang membuat Anda takut tidak peduli seberapa banyak Anda mencoba untuk tidak takut?',
+			'Apa yang kamu senangi saat ini?',
+			'Apa yang menjadi perhatian utama Anda saat ini?',
+			'Siapa guru yang tampak benar-benar unik?',
+			'Siapa satu-satunya guru yang membantu Anda percaya pada diri sendiri?',
+			'Selebriti apa yang tampaknya paling masuk akal, seperti orang "normal"?',
+			'Aktor/aktris seperti apa yang kamu suka? (Tinggi, pendek, intens, bagus, dll)',
+			'Siapa orang dewasa pertama yang Anda ingat di masa kecil Anda selain anggota keluarga?',
+			'Bagaimana Anda mengukur kebahagiaan?',
+			'Apakah Anda percaya orang yang tidak bahagia dapat melakukan hal-hal untuk membuat diri mereka bahagia?',
+			'hal-hal apa yang dapat dilakukan untuk meningkatkan kebahagiaan?',
+			'Apakah Anda percaya bahwa tersenyum—hanya tersenyum—dapat membantu seseorang merasa lebih bahagia?',
+			'Apa yang ada dalam daftar hal-hal yang harus Anda lakukan sebelum Anda mati? Mungkin-',
+			'Menjadi aktor terkenal atau penyanyi terkenal?',
+			'Menjadi jenius yang terkenal di dunia, atau sangat tampan?',
+			'Menjadi kaya dan mati pada usia 50 atau menjadi miskin dan mati pada usia 100',
+			'Berada di band rock terkenal di dunia selama lima tahun, atau di band pengantar tidur terkenal di dunia selama 20 tahun?',
+			'Untuk memiliki kolam renang atau bak mandi air panas? Mengapa?',
+			'Apa yang Anda harapkan Anda miliki lebih banyak?',
+			'Jika Anda memiliki lebih dari apa yang Anda inginkan, apa yang akan Anda lakukan dengannya?',
+			'Pernahkah Anda berharap bisa mengubah sesuatu yang besar tentang diri Anda? Jika demikian, apa?',
+			'Ketika Anda meniup lilin pada kue ulang tahun Anda saat masa kanak2, apa yang biasanya Anda harapkan?',
+			'Pernahkah Anda memiliki keinginan yang menjadi kenyataan?',
+			'Apa yang Anda harap dapat Anda lakukan, tetapi secara fisik Anda tidak mampu melakukannya?',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			];
+
+			var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+			output.innerHTML = randomQuote;	 
+
+		}
+	</script>
+</body>
+</html>
