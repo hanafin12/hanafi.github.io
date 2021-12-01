@@ -92,8 +92,8 @@ body {
 #main {
 	background-color: whitesmoke;
 	border: 5px solid darkred;
-	height: 300px;
-	width: 750px;
+	height: 50%;
+	width: 50%;
 	margin: 0 auto;
 	margin-top: 125px;
 	text-align: center;
@@ -101,8 +101,8 @@ body {
 
 #btn {
 	margin: 50px auto;
-	height: 50px;
-	width: 400px;
+	height: 50%;
+	width: 50%;
 	font-size: 22px;
 	background-color: limegreen;
 }
